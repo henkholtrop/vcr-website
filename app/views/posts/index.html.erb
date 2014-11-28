@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Peter</title>
+</head>
+<body>
+
+<% @posts.each do |post| %>
+  <article>
+    <h1><%= post.title %></h1>
+    <%= simple_format post.body %>
+  </article>
+<% end %>
+
+</body>
+</html>

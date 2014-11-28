@@ -1,0 +1,3003 @@
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePosts (20141023095422)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141023095422"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-23 13:17:39 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 23ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2014-10-23 13:17:49 +0200
+
+ActionController::RoutingError (No route matches [GET] "/blog"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.6ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-23 13:22:21 +0200
+
+ActionController::RoutingError (uninitialized constant PostsController):
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.4) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-23 13:25:35 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+AbstractController::ActionNotFound (The action 'index' could not be found for PostsController):
+  actionpack (4.1.4) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.4) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.4) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-23 13:28:11 +0200
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 16ms
+
+ActionView::MissingTemplate (Missing template posts/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/henkholtrop/projects/blog/app/views"
+):
+  actionview (4.1.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.4) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.4) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.4) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.4) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.4) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.4) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.4) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.4) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.4) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.4) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.4) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.4) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.4) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-23 13:33:21 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1310ms (Views: 1309.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 13:33:22 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-10-23 13:33:22 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 13:33:22 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 13:33:22 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 13:33:22 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-23 13:33:22 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-10-23 13:33:22 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-23 13:36:47 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 103ms (Views: 86.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 13:36:47 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-10-23 13:36:47 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 13:36:47 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 13:36:47 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-23 13:36:47 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 13:36:47 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-10-23 13:36:47 +0200
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["body", "Peter is fucking geil man!"], ["created_at", "2014-10-23 11:41:48.962938"], ["title", "Hallo"], ["updated_at", "2014-10-23 11:41:48.962938"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-23 13:42:00 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 102ms (Views: 87.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-10-23 13:42:01 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 13:42:01 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 13:42:01 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-10-23 13:42:01 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-23 13:42:01 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 13:42:01 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 13:42:01 +0200
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2014-11-21 14:16:14 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1930ms (Views: 1913.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:16:16 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:16 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:16:16 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:16:16 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:16 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:16 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:16 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:16:16 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:16 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:16 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:16 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-21 14:16:21 +0100
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 124ms (Views: 122.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:16:21 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:16:21 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:16:21 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:21 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:16:21 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:21 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:21 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:21 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:21 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:21 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:21 +0100
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2014-11-21 14:16:51 +0100
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 95ms (Views: 94.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:16:51 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:16:51 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:16:51 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:16:51 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:51 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:51 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:51 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:51 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:51 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:51 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:16:51 +0100
+
+
+Started POST "/articles/new" for 127.0.0.1 at 2014-11-21 14:18:12 +0100
+
+ActionController::RoutingError (No route matches [POST] "/articles/new"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (57.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (11.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateArticles (20141121131859)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141121131859"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2014-11-21 14:20:31 +0100
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 94ms (Views: 92.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:20:31 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:20:31 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:20:31 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:20:31 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:20:31 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:20:31 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:20:31 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:20:31 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:20:31 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:20:31 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:20:31 +0100
+
+
+Started POST "/articles" for 127.0.0.1 at 2014-11-21 14:20:34 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uHPl2LtQU9zQ6FMT7/IikC9mXSKKWRpXtGz1Q8u5x18=", "article"=>{"title"=>"fsafd", "text"=>"adfds"}, "commit"=>"Save Article"}
+Completed 500 Internal Server Error in 4ms
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/articles_controller.rb:9:in `create'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.9ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2014-11-21 14:21:19 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uHPl2LtQU9zQ6FMT7/IikC9mXSKKWRpXtGz1Q8u5x18=", "article"=>{"title"=>"fsafd", "text"=>"adfds"}, "commit"=>"Save Article"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "articles" ("created_at", "text", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-21 13:21:20.027166"], ["text", "adfds"], ["title", "fsafd"], ["updated_at", "2014-11-21 13:21:20.027166"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 40ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2014-11-21 14:21:20 +0100
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ArticlesController):
+  actionpack (4.1.8) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2014-11-21 14:22:24 +0100
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 91ms (Views: 90.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:22:24 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:22:24 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:22:24 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:22:24 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:22:24 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:22:24 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:22:24 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:22:24 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:22:24 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:22:24 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:22:24 +0100
+
+
+Started POST "/articles" for 127.0.0.1 at 2014-11-21 14:22:28 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uHPl2LtQU9zQ6FMT7/IikC9mXSKKWRpXtGz1Q8u5x18=", "article"=>{"title"=>"afddf", "text"=>"ffsaafsd"}, "commit"=>"Save Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("created_at", "text", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-21 13:22:28.404631"], ["text", "ffsaafsd"], ["title", "afddf"], ["updated_at", "2014-11-21 13:22:28.404631"]]
+  [1m[35m (15.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles/2
+Completed 302 Found in 26ms (ActiveRecord: 16.9ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2014-11-21 14:22:28 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered articles/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.title %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191959102560'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.9ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2014-11-21 14:26:46 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered articles/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.title %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191959102560'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.7ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2014-11-21 14:26:48 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered articles/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.title %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191959102560'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.9ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2014-11-21 14:26:51 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered articles/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.title %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191959102560'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-21 14:35:20 +0100
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 141ms (Views: 140.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:35:20 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:35:20 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:35:20 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:35:20 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:35:20 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:35:20 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:35:20 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:35:20 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:35:20 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:35:20 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:35:20 +0100
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2014-11-21 14:35:25 +0100
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 108ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:35:25 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:35:25 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:35:25 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:35:25 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:35:25 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:35:25 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:35:25 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:35:25 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:35:25 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:35:25 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:35:25 +0100
+
+
+Started POST "/articles" for 127.0.0.1 at 2014-11-21 14:35:29 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VyP9CjzAxhbG2VQM6pJZZfq7a195nffG42ZLLxEQBC8=", "article"=>{"title"=>"fsafdas", "text"=>"fsadafadfs"}, "commit"=>"Save Article"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "articles" ("created_at", "text", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-21 13:35:29.312651"], ["text", "fsadafadfs"], ["title", "fsafdas"], ["updated_at", "2014-11-21 13:35:29.312651"]]
+  [1m[36m (552.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles/3
+Completed 302 Found in 780ms (ActiveRecord: 554.4ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:35:29 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.title %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191959102560'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.6ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:36:02 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/Users/henkholtrop/projects/blog/app/views/articles/show.html.erb:3: syntax error, unexpected ':', expecting ')'
+...utput_buffer.append=( @article:title );@output_buffer.safe_a...
+...                               ^
+/Users/henkholtrop/projects/blog/app/views/articles/show.html.erb:8: syntax error, unexpected ':', expecting ')'
+...utput_buffer.append=( @article:text );@output_buffer.safe_ap...
+...                               ^):
+  app/views/articles/show.html.erb:3: syntax error, unexpected ':', expecting ')'
+  app/views/articles/show.html.erb:8: syntax error, unexpected ':', expecting ')'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.9ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:36:08 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.title %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191959376220'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.6ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:36:46 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `string' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.string %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191929009300'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.7ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:36:48 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `string' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.string %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191929009300'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.7ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:36:49 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `string' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.string %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191929009300'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.9ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:36:49 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `string' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.string %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191929009300'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.3ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:36:50 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `string' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.string %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191929009300'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.0ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:36:50 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `string' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.string %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191929009300'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.6ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:36:50 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `string' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.string %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191929009300'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.1ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:36:51 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `string' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.string %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191929009300'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.0ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:36:51 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `string' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.string %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191929009300'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.5ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:36:51 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `string' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.string %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191929009300'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.1ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:36:51 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `string' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.string %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191929009300'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.4ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:36:51 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `string' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.string %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191929009300'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.6ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:36:56 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `string' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.string %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191929009300'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.7ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2014-11-21 14:36:57 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered articles/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `string' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.string %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191929009300'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.8ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2014-11-21 14:37:03 +0100
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 100ms (Views: 99.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:37:03 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:37:03 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:37:03 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:37:03 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:37:03 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:37:03 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:37:03 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:37:03 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:37:03 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:37:03 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:37:03 +0100
+
+
+Started POST "/articles" for 127.0.0.1 at 2014-11-21 14:37:07 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VyP9CjzAxhbG2VQM6pJZZfq7a195nffG42ZLLxEQBC8=", "article"=>{"title"=>"fdaffad", "text"=>"ffadsfdsfads"}, "commit"=>"Save Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "articles" ("created_at", "text", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-21 13:37:07.976242"], ["text", "ffadsfdsfads"], ["title", "fdaffad"], ["updated_at", "2014-11-21 13:37:07.976242"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 5ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2014-11-21 14:37:07 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendered articles/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `string' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.string %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191929009300'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.4ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2014-11-21 14:37:13 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendered articles/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.title %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__3768225688151829541_70191925881920'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.1ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2014-11-21 14:38:47 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 89ms (Views: 80.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:38:47 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:38:47 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:38:47 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:38:47 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:38:47 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:38:47 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:38:48 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:38:48 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:38:48 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:38:48 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:38:48 +0100
+
+
+Started GET "/articles/index" for 127.0.0.1 at 2014-11-21 14:40:32 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=index):
+  app/controllers/articles_controller.rb:17:in `show'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.7ms)
+
+
+Started GET "/articles/index" for 127.0.0.1 at 2014-11-21 14:44:15 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mArticle Load (5.4ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 8ms
+
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=index):
+  app/controllers/articles_controller.rb:17:in `show'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-21 14:45:47 +0100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 149ms (Views: 148.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:45:47 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:45:47 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:45:48 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:45:48 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:45:48 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:45:48 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:45:48 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:45:48 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:45:48 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:45:48 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:45:48 +0100
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-21 14:49:28 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 96ms (Views: 92.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:49:28 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:49:28 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:28 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:49:28 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:28 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:28 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:49:28 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:28 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:28 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:28 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:28 +0100
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2014-11-21 14:49:30 +0100
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 84ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2014-11-21 14:49:33 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VyP9CjzAxhbG2VQM6pJZZfq7a195nffG42ZLLxEQBC8=", "article"=>{"title"=>"aa", "text"=>"aa"}, "commit"=>"Save Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered articles/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 95ms (Views: 91.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:49:34 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:49:34 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:34 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:49:34 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:34 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:34 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:34 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:34 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:34 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:34 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:49:34 +0100
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-21 14:49:44 +0100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 79ms (Views: 78.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:49:44 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:49:44 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:49:45 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:49:45 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:45 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:45 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:45 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:45 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:45 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:45 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:49:45 +0100
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-21 14:52:04 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 82ms (Views: 78.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:52:04 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:52:04 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:52:04 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:52:04 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:52:04 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:52:04 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:52:04 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:52:04 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:52:04 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:52:04 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:52:04 +0100
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2014-11-21 14:53:06 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 89ms (Views: 87.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-21 14:56:37 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 81ms (Views: 77.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:56:37 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:56:38 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:56:38 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:56:38 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:56:38 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:56:38 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:56:38 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:56:38 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:56:38 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:56:38 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:56:38 +0100
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-21 14:56:45 +0100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 93ms (Views: 92.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:56:46 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:56:46 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:56:46 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:56:46 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:56:46 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:56:46 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:56:46 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:56:46 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:56:46 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:56:46 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:56:46 +0100
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2014-11-21 14:58:47 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 87ms (Views: 85.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-21 14:58:48 +0100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 78ms (Views: 76.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2014-11-21 14:59:09 +0100
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (3.4ms)
+  Rendered articles/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 90ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2014-11-21 14:59:25 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VyP9CjzAxhbG2VQM6pJZZfq7a195nffG42ZLLxEQBC8=", "article"=>{"title"=>"Wereldkampioenen lossen elkaar af bij Bayern München", "text"=>"Het langdurig wegvallen van Philipp Lahm valt Bayern München-trainer Pep Guardiola zwaar. Met de van een slepende knieblessure herstelde Bastian Schweinsteiger dient de vervanger van zijn collega-wereldkampioen, die door een gebroken enkel drie maanden is uitgeschakeld, zich echter aan.\r\nSchweinsteiger werkte de afgelopen anderhalve week aan zijn rentree sinds hij de groepstraining hervatte en kan zaterdag tegen 1899 Hoffenheim zijn eerste wedstrijd spelen sinds de WK-finale van 13 juli tegen Argentinië. 'Hij zit bij de wedstrijdselectie', bevestigde Guardiola vrijdag tijdens de persconferentie. 'Dat is het goede nieuws', aldus de Spaanse oefenmeester.\r\n\r\nSlecht nieuws was er deze week ook voor Bayern, want met Lahm zag Guardiola na David Alaba, Holger Badstuber, Javi Martínez en Thiago Alcántara opnieuw een potentiële basisspeler wegvallen. Op de vraag hoe zwaar het wegvallen van Lahm hem valt, antwoordde Guardiola veelzeggend: 'Hij was mijn belangrijkste speler, natuurlijk is dat moeilijk voor ons.'\r\n\r\nLahm was tot dusver een onmisbare pion op het middenveld, waar de 31-jarige aanvoerder voornamelijk speelt sinds Guardiola vorig jaar trainer van Bayern werd. Toevallig of niet, de positie van Lahm is precies de plek waarop ook Schweinsteiger zijn wedstrijden doorgaans afwerkt en vier maanden geleden Duitsland samen met Lahm nog naar de wereldtitel leidde.\r\n\r\nOmdat ook Jérôme Boateng, Thomas Müller en Manuel Neuer ondanks pijntjes opgelopen tijdens de interlands met Duitsland 'allemaal gezond zijn', zoals Guardiola het verwoordde, neemt Bayern het ondanks al het blessureleed met een respectabel elftal op tegen Hoffenheim. De ploeg van trainer Markus Gisdol staat vijfde op tien punten van koploper Bayern, dat in eigen huis nog geen enkel punt verloor."}, "commit"=>"Create Article"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "articles" ("created_at", "text", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-21 13:59:25.337809"], ["text", "Het langdurig wegvallen van Philipp Lahm valt Bayern München-trainer Pep Guardiola zwaar. Met de van een slepende knieblessure herstelde Bastian Schweinsteiger dient de vervanger van zijn collega-wereldkampioen, die door een gebroken enkel drie maanden is uitgeschakeld, zich echter aan.\r\nSchweinsteiger werkte de afgelopen anderhalve week aan zijn rentree sinds hij de groepstraining hervatte en kan zaterdag tegen 1899 Hoffenheim zijn eerste wedstrijd spelen sinds de WK-finale van 13 juli tegen Argentinië. 'Hij zit bij de wedstrijdselectie', bevestigde Guardiola vrijdag tijdens de persconferentie. 'Dat is het goede nieuws', aldus de Spaanse oefenmeester.\r\n\r\nSlecht nieuws was er deze week ook voor Bayern, want met Lahm zag Guardiola na David Alaba, Holger Badstuber, Javi Martínez en Thiago Alcántara opnieuw een potentiële basisspeler wegvallen. Op de vraag hoe zwaar het wegvallen van Lahm hem valt, antwoordde Guardiola veelzeggend: 'Hij was mijn belangrijkste speler, natuurlijk is dat moeilijk voor ons.'\r\n\r\nLahm was tot dusver een onmisbare pion op het middenveld, waar de 31-jarige aanvoerder voornamelijk speelt sinds Guardiola vorig jaar trainer van Bayern werd. Toevallig of niet, de positie van Lahm is precies de plek waarop ook Schweinsteiger zijn wedstrijden doorgaans afwerkt en vier maanden geleden Duitsland samen met Lahm nog naar de wereldtitel leidde.\r\n\r\nOmdat ook Jérôme Boateng, Thomas Müller en Manuel Neuer ondanks pijntjes opgelopen tijdens de interlands met Duitsland 'allemaal gezond zijn', zoals Guardiola het verwoordde, neemt Bayern het ondanks al het blessureleed met een respectabel elftal op tegen Hoffenheim. De ploeg van trainer Markus Gisdol staat vijfde op tien punten van koploper Bayern, dat in eigen huis nog geen enkel punt verloor."], ["title", "Wereldkampioenen lossen elkaar af bij Bayern München"], ["updated_at", "2014-11-21 13:59:25.337809"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles/5
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/articles/5" for 127.0.0.1 at 2014-11-21 14:59:25 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered articles/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 86ms (Views: 84.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 14:59:25 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 14:59:25 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 14:59:25 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 14:59:25 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 14:59:25 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 14:59:25 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 14:59:25 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 14:59:25 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 14:59:25 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 14:59:25 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 14:59:25 +0100
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-21 14:59:29 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 93ms (Views: 91.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-21 15:04:10 +0100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 82ms (Views: 80.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 15:04:10 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 15:04:10 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 15:04:10 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 15:04:10 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-21 15:04:10 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-21 15:04:10 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-21 15:04:10 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-21 15:04:10 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-21 15:04:10 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 15:04:10 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-21 15:04:10 +0100
+
+
+Started GET "/articles/5" for 127.0.0.1 at 2014-11-21 15:04:13 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered articles/show.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 123ms (Views: 121.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-21 15:04:53 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-21 15:04:53 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-21 15:04:53 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-21 15:04:53 +0100
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-28 14:44:05 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (11.0ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 312ms (Views: 251.7ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 14:44:06 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 14:44:06 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 14:44:06 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 14:44:06 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 14:44:06 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 14:44:06 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 14:44:06 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 14:44:06 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 14:44:06 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 14:44:06 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 14:44:06 +0100
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-28 15:04:07 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `has_attached_file' for #<Class:0x007fdb62f5b3e8>):
+  app/models/article.rb:4:in `<class:Article>'
+  app/models/article.rb:1:in `<top (required)>'
+  app/controllers/articles_controller.rb:7:in `index'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-28 15:05:01 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 186ms (Views: 169.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 15:05:01 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 15:05:01 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 15:05:01 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 15:05:01 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 15:05:01 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 15:05:01 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 15:05:01 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 15:05:01 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 15:05:01 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 15:05:01 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 15:05:01 +0100
+
+
+Started GET "/articles/5/edit" for 127.0.0.1 at 2014-11-28 15:05:04 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered articles/_form.html.erb (107.4ms)
+  Rendered articles/edit.html.erb within layouts/application (125.2ms)
+Completed 200 OK in 227ms (Views: 224.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/articles/5" for 127.0.0.1 at 2014-11-28 15:05:50 +0100
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zkf529gwe6Ryztaj1hBfNv6UVdmu53WRRGssN/OFlOk=", "article"=>{"title"=>"Wereldkampioenen lossen elkaar af bij Bayern München", "text"=>"Het langdurig wegvallen van Philipp Lahm valt Bayern München-trainer Pep Guardiola zwaar. Met de van een slepende knieblessure herstelde Bastian Schweinsteiger dient de vervanger van zijn collega-wereldkampioen, die door een gebroken enkel drie maanden is uitgeschakeld, zich echter aan.\r\nSchweinsteiger werkte de afgelopen anderhalve week aan zijn rentree sinds hij de groepstraining hervatte en kan zaterdag tegen 1899 Hoffenheim zijn eerste wedstrijd spelen sinds de WK-finale van 13 juli tegen Argentinië. 'Hij zit bij de wedstrijdselectie', bevestigde Guardiola vrijdag tijdens de persconferentie. 'Dat is het goede nieuws', aldus de Spaanse oefenmeester.\r\n\r\nSlecht nieuws was er deze week ook voor Bayern, want met Lahm zag Guardiola na David Alaba, Holger Badstuber, Javi Martínez en Thiago Alcántara opnieuw een potentiële basisspeler wegvallen. Op de vraag hoe zwaar het wegvallen van Lahm hem valt, antwoordde Guardiola veelzeggend: 'Hij was mijn belangrijkste speler, natuurlijk is dat moeilijk voor ons.'\r\n\r\nLahm was tot dusver een onmisbare pion op het middenveld, waar de 31-jarige aanvoerder voornamelijk speelt sinds Guardiola vorig jaar trainer van Bayern werd. Toevallig of niet, de positie van Lahm is precies de plek waarop ook Schweinsteiger zijn wedstrijden doorgaans afwerkt en vier maanden geleden Duitsland samen met Lahm nog naar de wereldtitel leidde.\r\n\r\nOmdat ook Jérôme Boateng, Thomas Müller en Manuel Neuer ondanks pijntjes opgelopen tijdens de interlands met Duitsland 'allemaal gezond zijn', zoals Guardiola het verwoordde, neemt Bayern het ondanks al het blessureleed met een respectabel elftal op tegen Hoffenheim. De ploeg van trainer Markus Gisdol staat vijfde op tien punten van koploper Bayern, dat in eigen huis nog geen enkel punt verloor.", "cover_image"=>#<ActionDispatch::Http::UploadedFile:0x007f9a6c150320 @tempfile=#<Tempfile:/var/folders/0h/7bkp_vq15b93htfjjp6czlbh0000gn/T/RackMultipart20141128-672-1fe957f>, @original_filename="Werk.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[cover_image]\"; filename=\"Werk.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Article", "id"=>"5"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 4ms
+
+Paperclip::Error (Article model missing required attr_accessor for 'cover_image_file_name'):
+  app/controllers/articles_controller.rb:31:in `update'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.1ms)
+
+
+Started PATCH "/articles/5" for 127.0.0.1 at 2014-11-28 15:10:36 +0100
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zkf529gwe6Ryztaj1hBfNv6UVdmu53WRRGssN/OFlOk=", "article"=>{"title"=>"Wereldkampioenen lossen elkaar af bij Bayern München", "text"=>"Het langdurig wegvallen van Philipp Lahm valt Bayern München-trainer Pep Guardiola zwaar. Met de van een slepende knieblessure herstelde Bastian Schweinsteiger dient de vervanger van zijn collega-wereldkampioen, die door een gebroken enkel drie maanden is uitgeschakeld, zich echter aan.\r\nSchweinsteiger werkte de afgelopen anderhalve week aan zijn rentree sinds hij de groepstraining hervatte en kan zaterdag tegen 1899 Hoffenheim zijn eerste wedstrijd spelen sinds de WK-finale van 13 juli tegen Argentinië. 'Hij zit bij de wedstrijdselectie', bevestigde Guardiola vrijdag tijdens de persconferentie. 'Dat is het goede nieuws', aldus de Spaanse oefenmeester.\r\n\r\nSlecht nieuws was er deze week ook voor Bayern, want met Lahm zag Guardiola na David Alaba, Holger Badstuber, Javi Martínez en Thiago Alcántara opnieuw een potentiële basisspeler wegvallen. Op de vraag hoe zwaar het wegvallen van Lahm hem valt, antwoordde Guardiola veelzeggend: 'Hij was mijn belangrijkste speler, natuurlijk is dat moeilijk voor ons.'\r\n\r\nLahm was tot dusver een onmisbare pion op het middenveld, waar de 31-jarige aanvoerder voornamelijk speelt sinds Guardiola vorig jaar trainer van Bayern werd. Toevallig of niet, de positie van Lahm is precies de plek waarop ook Schweinsteiger zijn wedstrijden doorgaans afwerkt en vier maanden geleden Duitsland samen met Lahm nog naar de wereldtitel leidde.\r\n\r\nOmdat ook Jérôme Boateng, Thomas Müller en Manuel Neuer ondanks pijntjes opgelopen tijdens de interlands met Duitsland 'allemaal gezond zijn', zoals Guardiola het verwoordde, neemt Bayern het ondanks al het blessureleed met een respectabel elftal op tegen Hoffenheim. De ploeg van trainer Markus Gisdol staat vijfde op tien punten van koploper Bayern, dat in eigen huis nog geen enkel punt verloor.", "cover_image"=>#<ActionDispatch::Http::UploadedFile:0x007f9a70109020 @tempfile=#<Tempfile:/var/folders/0h/7bkp_vq15b93htfjjp6czlbh0000gn/T/RackMultipart20141128-672-ty2gin>, @original_filename="Werk.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[cover_image]\"; filename=\"Werk.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Article", "id"=>"5"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 10ms
+
+Paperclip::Error (Article model missing required attr_accessor for 'cover_image_file_name'):
+  app/controllers/articles_controller.rb:31:in `update'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.7ms)
+
+
+Started PATCH "/articles/5" for 127.0.0.1 at 2014-11-28 15:12:42 +0100
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zkf529gwe6Ryztaj1hBfNv6UVdmu53WRRGssN/OFlOk=", "article"=>{"title"=>"Wereldkampioenen lossen elkaar af bij Bayern München", "text"=>"Het langdurig wegvallen van Philipp Lahm valt Bayern München-trainer Pep Guardiola zwaar. Met de van een slepende knieblessure herstelde Bastian Schweinsteiger dient de vervanger van zijn collega-wereldkampioen, die door een gebroken enkel drie maanden is uitgeschakeld, zich echter aan.\r\nSchweinsteiger werkte de afgelopen anderhalve week aan zijn rentree sinds hij de groepstraining hervatte en kan zaterdag tegen 1899 Hoffenheim zijn eerste wedstrijd spelen sinds de WK-finale van 13 juli tegen Argentinië. 'Hij zit bij de wedstrijdselectie', bevestigde Guardiola vrijdag tijdens de persconferentie. 'Dat is het goede nieuws', aldus de Spaanse oefenmeester.\r\n\r\nSlecht nieuws was er deze week ook voor Bayern, want met Lahm zag Guardiola na David Alaba, Holger Badstuber, Javi Martínez en Thiago Alcántara opnieuw een potentiële basisspeler wegvallen. Op de vraag hoe zwaar het wegvallen van Lahm hem valt, antwoordde Guardiola veelzeggend: 'Hij was mijn belangrijkste speler, natuurlijk is dat moeilijk voor ons.'\r\n\r\nLahm was tot dusver een onmisbare pion op het middenveld, waar de 31-jarige aanvoerder voornamelijk speelt sinds Guardiola vorig jaar trainer van Bayern werd. Toevallig of niet, de positie van Lahm is precies de plek waarop ook Schweinsteiger zijn wedstrijden doorgaans afwerkt en vier maanden geleden Duitsland samen met Lahm nog naar de wereldtitel leidde.\r\n\r\nOmdat ook Jérôme Boateng, Thomas Müller en Manuel Neuer ondanks pijntjes opgelopen tijdens de interlands met Duitsland 'allemaal gezond zijn', zoals Guardiola het verwoordde, neemt Bayern het ondanks al het blessureleed met een respectabel elftal op tegen Hoffenheim. De ploeg van trainer Markus Gisdol staat vijfde op tien punten van koploper Bayern, dat in eigen huis nog geen enkel punt verloor.", "cover_image"=>#<ActionDispatch::Http::UploadedFile:0x007f9a6ee1c980 @tempfile=#<Tempfile:/var/folders/0h/7bkp_vq15b93htfjjp6czlbh0000gn/T/RackMultipart20141128-672-1oaflqs>, @original_filename="Werk.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[cover_image]\"; filename=\"Werk.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Article", "id"=>"5"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 10ms
+
+Paperclip::Error (Article model missing required attr_accessor for 'cover_image_file_name'):
+  app/controllers/articles_controller.rb:31:in `update'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.3ms)
+
+
+Started PATCH "/articles/5" for 127.0.0.1 at 2014-11-28 15:13:06 +0100
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zkf529gwe6Ryztaj1hBfNv6UVdmu53WRRGssN/OFlOk=", "article"=>{"title"=>"Wereldkampioenen lossen elkaar af bij Bayern München", "text"=>"Het langdurig wegvallen van Philipp Lahm valt Bayern München-trainer Pep Guardiola zwaar. Met de van een slepende knieblessure herstelde Bastian Schweinsteiger dient de vervanger van zijn collega-wereldkampioen, die door een gebroken enkel drie maanden is uitgeschakeld, zich echter aan.\r\nSchweinsteiger werkte de afgelopen anderhalve week aan zijn rentree sinds hij de groepstraining hervatte en kan zaterdag tegen 1899 Hoffenheim zijn eerste wedstrijd spelen sinds de WK-finale van 13 juli tegen Argentinië. 'Hij zit bij de wedstrijdselectie', bevestigde Guardiola vrijdag tijdens de persconferentie. 'Dat is het goede nieuws', aldus de Spaanse oefenmeester.\r\n\r\nSlecht nieuws was er deze week ook voor Bayern, want met Lahm zag Guardiola na David Alaba, Holger Badstuber, Javi Martínez en Thiago Alcántara opnieuw een potentiële basisspeler wegvallen. Op de vraag hoe zwaar het wegvallen van Lahm hem valt, antwoordde Guardiola veelzeggend: 'Hij was mijn belangrijkste speler, natuurlijk is dat moeilijk voor ons.'\r\n\r\nLahm was tot dusver een onmisbare pion op het middenveld, waar de 31-jarige aanvoerder voornamelijk speelt sinds Guardiola vorig jaar trainer van Bayern werd. Toevallig of niet, de positie van Lahm is precies de plek waarop ook Schweinsteiger zijn wedstrijden doorgaans afwerkt en vier maanden geleden Duitsland samen met Lahm nog naar de wereldtitel leidde.\r\n\r\nOmdat ook Jérôme Boateng, Thomas Müller en Manuel Neuer ondanks pijntjes opgelopen tijdens de interlands met Duitsland 'allemaal gezond zijn', zoals Guardiola het verwoordde, neemt Bayern het ondanks al het blessureleed met een respectabel elftal op tegen Hoffenheim. De ploeg van trainer Markus Gisdol staat vijfde op tien punten van koploper Bayern, dat in eigen huis nog geen enkel punt verloor.", "cover_image"=>#<ActionDispatch::Http::UploadedFile:0x007f9a6ec7d660 @tempfile=#<Tempfile:/var/folders/0h/7bkp_vq15b93htfjjp6czlbh0000gn/T/RackMultipart20141128-672-zg6nun>, @original_filename="Werk.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[cover_image]\"; filename=\"Werk.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Article", "id"=>"5"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 10ms
+
+Paperclip::Error (Article model missing required attr_accessor for 'cover_image_file_name'):
+  app/controllers/articles_controller.rb:31:in `update'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.9ms)
+
+
+Started PATCH "/articles/5" for 127.0.0.1 at 2014-11-28 15:17:54 +0100
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zkf529gwe6Ryztaj1hBfNv6UVdmu53WRRGssN/OFlOk=", "article"=>{"title"=>"Wereldkampioenen lossen elkaar af bij Bayern München", "text"=>"Het langdurig wegvallen van Philipp Lahm valt Bayern München-trainer Pep Guardiola zwaar. Met de van een slepende knieblessure herstelde Bastian Schweinsteiger dient de vervanger van zijn collega-wereldkampioen, die door een gebroken enkel drie maanden is uitgeschakeld, zich echter aan.\r\nSchweinsteiger werkte de afgelopen anderhalve week aan zijn rentree sinds hij de groepstraining hervatte en kan zaterdag tegen 1899 Hoffenheim zijn eerste wedstrijd spelen sinds de WK-finale van 13 juli tegen Argentinië. 'Hij zit bij de wedstrijdselectie', bevestigde Guardiola vrijdag tijdens de persconferentie. 'Dat is het goede nieuws', aldus de Spaanse oefenmeester.\r\n\r\nSlecht nieuws was er deze week ook voor Bayern, want met Lahm zag Guardiola na David Alaba, Holger Badstuber, Javi Martínez en Thiago Alcántara opnieuw een potentiële basisspeler wegvallen. Op de vraag hoe zwaar het wegvallen van Lahm hem valt, antwoordde Guardiola veelzeggend: 'Hij was mijn belangrijkste speler, natuurlijk is dat moeilijk voor ons.'\r\n\r\nLahm was tot dusver een onmisbare pion op het middenveld, waar de 31-jarige aanvoerder voornamelijk speelt sinds Guardiola vorig jaar trainer van Bayern werd. Toevallig of niet, de positie van Lahm is precies de plek waarop ook Schweinsteiger zijn wedstrijden doorgaans afwerkt en vier maanden geleden Duitsland samen met Lahm nog naar de wereldtitel leidde.\r\n\r\nOmdat ook Jérôme Boateng, Thomas Müller en Manuel Neuer ondanks pijntjes opgelopen tijdens de interlands met Duitsland 'allemaal gezond zijn', zoals Guardiola het verwoordde, neemt Bayern het ondanks al het blessureleed met een respectabel elftal op tegen Hoffenheim. De ploeg van trainer Markus Gisdol staat vijfde op tien punten van koploper Bayern, dat in eigen huis nog geen enkel punt verloor.", "cover_image"=>#<ActionDispatch::Http::UploadedFile:0x007f9a6ea01828 @tempfile=#<Tempfile:/var/folders/0h/7bkp_vq15b93htfjjp6czlbh0000gn/T/RackMultipart20141128-672-7xyqvo>, @original_filename="Werk.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[cover_image]\"; filename=\"Werk.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Article", "id"=>"5"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 10ms
+
+Paperclip::Error (Article model missing required attr_accessor for 'cover_image_file_name'):
+  app/controllers/articles_controller.rb:36:in `update'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentImageToArticles (20141128144506)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "articles" ADD "image_file_name" varchar(255)[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "articles" ADD "image_content_type" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "articles" ADD "image_file_size" integer[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "articles" ADD "image_updated_at" datetime
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141128144506"]]
+  [1m[35m (22.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-28 15:48:12 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 190ms (Views: 169.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 15:48:13 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 15:48:13 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 15:48:13 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 15:48:13 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 15:48:13 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 15:48:13 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 15:48:13 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 15:48:13 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 15:48:13 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 15:48:13 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 15:48:13 +0100
+
+
+Started GET "/articles/5/edit" for 127.0.0.1 at 2014-11-28 15:48:17 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered articles/_form.html.erb (21.3ms)
+  Rendered articles/edit.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 113ms (Views: 110.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/4/edit" for 127.0.0.1 at 2014-11-28 15:48:28 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered articles/_form.html.erb (3.0ms)
+  Rendered articles/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 88ms (Views: 86.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-28 15:48:50 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 78ms (Views: 76.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 15:48:50 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 15:48:50 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 15:48:50 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 15:48:50 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 15:48:50 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 15:48:50 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 15:48:50 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 15:48:50 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 15:48:50 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 15:48:50 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 15:48:50 +0100
+
+
+Started GET "/articles/4/edit" for 127.0.0.1 at 2014-11-28 15:48:52 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered articles/_form.html.erb (23.1ms)
+  Rendered articles/edit.html.erb within layouts/application (24.2ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (undefined method `file' for #<ActionView::Helpers::FormBuilder:0x007f9c8c0715b8>):
+    22:   
+    23:   <p>
+    24:     <%= f.label :image %><br>
+    25:     <%= f.file :image %>
+    26:   </p>
+    27: 
+    28:   <p>
+  app/views/articles/_form.html.erb:25:in `block in _app_views_articles__form_html_erb__3806659213871964987_70155170822760'
+  app/views/articles/_form.html.erb:1:in `_app_views_articles__form_html_erb__3806659213871964987_70155170822760'
+  app/views/articles/edit.html.erb:3:in `_app_views_articles_edit_html_erb__3963715918793472737_70155174344540'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.2ms)
+
+
+Started GET "/articles/4/edit" for 127.0.0.1 at 2014-11-28 15:48:52 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered articles/_form.html.erb (15.5ms)
+  Rendered articles/edit.html.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 49ms
+
+ActionView::Template::Error (undefined method `file' for #<ActionView::Helpers::FormBuilder:0x007f9c8ef4e020>):
+    22:   
+    23:   <p>
+    24:     <%= f.label :image %><br>
+    25:     <%= f.file :image %>
+    26:   </p>
+    27: 
+    28:   <p>
+  app/views/articles/_form.html.erb:25:in `block in _app_views_articles__form_html_erb__3806659213871964987_70155195068600'
+  app/views/articles/_form.html.erb:1:in `_app_views_articles__form_html_erb__3806659213871964987_70155195068600'
+  app/views/articles/edit.html.erb:3:in `_app_views_articles_edit_html_erb__3963715918793472737_70155195099980'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.4ms)
+
+
+Started GET "/articles/4/edit" for 127.0.0.1 at 2014-11-28 15:49:04 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered articles/_form.html.erb (4.7ms)
+  Rendered articles/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 81ms (Views: 79.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 15:49:04 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 15:49:04 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 15:49:04 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 15:49:04 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 15:49:04 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 15:49:04 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 15:49:04 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 15:49:04 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 15:49:04 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 15:49:04 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 15:49:04 +0100
+
+
+Started GET "/articles/4/edit" for 127.0.0.1 at 2014-11-28 15:49:33 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered articles/_form.html.erb (3.1ms)
+  Rendered articles/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 90ms (Views: 88.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 15:49:34 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 15:49:34 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 15:49:34 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 15:49:34 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 15:49:34 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 15:49:34 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 15:49:34 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 15:49:34 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 15:49:34 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 15:49:34 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 15:49:34 +0100
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-28 15:49:35 +0100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 81ms (Views: 80.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/5/edit" for 127.0.0.1 at 2014-11-28 15:53:11 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered articles/_form.html.erb (3.9ms)
+  Rendered articles/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 86ms (Views: 83.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/articles/5" for 127.0.0.1 at 2014-11-28 15:53:18 +0100
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zkf529gwe6Ryztaj1hBfNv6UVdmu53WRRGssN/OFlOk=", "article"=>{"title"=>"Wereldkampioenen lossen elkaar af bij Bayern München", "text"=>"Het langdurig wegvallen van Philipp Lahm valt Bayern München-trainer Pep Guardiola zwaar. Met de van een slepende knieblessure herstelde Bastian Schweinsteiger dient de vervanger van zijn collega-wereldkampioen, die door een gebroken enkel drie maanden is uitgeschakeld, zich echter aan.\r\nSchweinsteiger werkte de afgelopen anderhalve week aan zijn rentree sinds hij de groepstraining hervatte en kan zaterdag tegen 1899 Hoffenheim zijn eerste wedstrijd spelen sinds de WK-finale van 13 juli tegen Argentinië. 'Hij zit bij de wedstrijdselectie', bevestigde Guardiola vrijdag tijdens de persconferentie. 'Dat is het goede nieuws', aldus de Spaanse oefenmeester.\r\n\r\nSlecht nieuws was er deze week ook voor Bayern, want met Lahm zag Guardiola na David Alaba, Holger Badstuber, Javi Martínez en Thiago Alcántara opnieuw een potentiële basisspeler wegvallen. Op de vraag hoe zwaar het wegvallen van Lahm hem valt, antwoordde Guardiola veelzeggend: 'Hij was mijn belangrijkste speler, natuurlijk is dat moeilijk voor ons.'\r\n\r\nLahm was tot dusver een onmisbare pion op het middenveld, waar de 31-jarige aanvoerder voornamelijk speelt sinds Guardiola vorig jaar trainer van Bayern werd. Toevallig of niet, de positie van Lahm is precies de plek waarop ook Schweinsteiger zijn wedstrijden doorgaans afwerkt en vier maanden geleden Duitsland samen met Lahm nog naar de wereldtitel leidde.\r\n\r\nOmdat ook Jérôme Boateng, Thomas Müller en Manuel Neuer ondanks pijntjes opgelopen tijdens de interlands met Duitsland 'allemaal gezond zijn', zoals Guardiola het verwoordde, neemt Bayern het ondanks al het blessureleed met een respectabel elftal op tegen Hoffenheim. De ploeg van trainer Markus Gisdol staat vijfde op tien punten van koploper Bayern, dat in eigen huis nog geen enkel punt verloor.", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f9c8ed74bc8 @tempfile=#<Tempfile:/var/folders/0h/7bkp_vq15b93htfjjp6czlbh0000gn/T/RackMultipart20141128-961-sx1amo>, @original_filename="Werk.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"Werk.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Article", "id"=>"5"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/var/folders/0h/7bkp_vq15b93htfjjp6czlbh0000gn/T/2ec778f53f04e518adf0ca5240356d9420141128-961-bx88gx.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0h/7bkp_vq15b93htfjjp6czlbh0000gn/T/2ec778f53f04e518adf0ca5240356d9420141128-961-3jd7qk.png[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0h/7bkp_vq15b93htfjjp6czlbh0000gn/T/2ec778f53f04e518adf0ca5240356d9420141128-961-3jd7qk.png[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: file -b --mime '/var/folders/0h/7bkp_vq15b93htfjjp6czlbh0000gn/T/2ec778f53f04e518adf0ca5240356d9420141128-961-16lnwsz.png'
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered articles/_form.html.erb (6.5ms)
+  Rendered articles/edit.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 186ms (Views: 87.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 15:53:18 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 15:53:18 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 15:53:18 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 15:53:18 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 15:53:18 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 15:53:18 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 15:53:18 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 15:53:18 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 15:53:18 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 15:53:18 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 15:53:18 +0100
+
+
+Started PATCH "/articles/5" for 127.0.0.1 at 2014-11-28 15:54:39 +0100
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zkf529gwe6Ryztaj1hBfNv6UVdmu53WRRGssN/OFlOk=", "article"=>{"title"=>"Wereldkampioenen lossen elkaar af bij Bayern München", "text"=>"Het langdurig wegvallen van Philipp Lahm valt Bayern München-trainer Pep Guardiola zwaar. Met de van een slepende knieblessure herstelde Bastian Schweinsteiger dient de vervanger van zijn collega-wereldkampioen, die door een gebroken enkel drie maanden is uitgeschakeld, zich echter aan.\r\nSchweinsteiger werkte de afgelopen anderhalve week aan zijn rentree sinds hij de groepstraining hervatte en kan zaterdag tegen 1899 Hoffenheim zijn eerste wedstrijd spelen sinds de WK-finale van 13 juli tegen Argentinië. 'Hij zit bij de wedstrijdselectie', bevestigde Guardiola vrijdag tijdens de persconferentie. 'Dat is het goede nieuws', aldus de Spaanse oefenmeester.\r\n\r\nSlecht nieuws was er deze week ook voor Bayern, want met Lahm zag Guardiola na David Alaba, Holger Badstuber, Javi Martínez en Thiago Alcántara opnieuw een potentiële basisspeler wegvallen. Op de vraag hoe zwaar het wegvallen van Lahm hem valt, antwoordde Guardiola veelzeggend: 'Hij was mijn belangrijkste speler, natuurlijk is dat moeilijk voor ons.'\r\n\r\nLahm was tot dusver een onmisbare pion op het middenveld, waar de 31-jarige aanvoerder voornamelijk speelt sinds Guardiola vorig jaar trainer van Bayern werd. Toevallig of niet, de positie van Lahm is precies de plek waarop ook Schweinsteiger zijn wedstrijden doorgaans afwerkt en vier maanden geleden Duitsland samen met Lahm nog naar de wereldtitel leidde.\r\n\r\nOmdat ook Jérôme Boateng, Thomas Müller en Manuel Neuer ondanks pijntjes opgelopen tijdens de interlands met Duitsland 'allemaal gezond zijn', zoals Guardiola het verwoordde, neemt Bayern het ondanks al het blessureleed met een respectabel elftal op tegen Hoffenheim. De ploeg van trainer Markus Gisdol staat vijfde op tien punten van koploper Bayern, dat in eigen huis nog geen enkel punt verloor.", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f9c90080848 @tempfile=#<Tempfile:/var/folders/0h/7bkp_vq15b93htfjjp6czlbh0000gn/T/RackMultipart20141128-961-14njgxh>, @original_filename="cid176355_SchweinsteigerLahmVI01_1180_580x310.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"cid176355_SchweinsteigerLahmVI01_1180_580x310.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Article", "id"=>"5"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Command :: file -b --mime '/var/folders/0h/7bkp_vq15b93htfjjp6czlbh0000gn/T/21332ac06331a98b7a06f0502915298d20141128-961-4ywe3j.jpg'
+Command :: file -b --mime '/var/folders/0h/7bkp_vq15b93htfjjp6czlbh0000gn/T/21332ac06331a98b7a06f0502915298d20141128-961-8b8rg4.jpg'
+Binary data inserted for `string` type on column `image_content_type`
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "articles" SET "image_content_type" = ?, "image_file_name" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "articles"."id" = 5[0m  [["image_content_type", "image/jpeg"], ["image_file_name", "cid176355_SchweinsteigerLahmVI01_1180_580x310.jpg"], ["image_file_size", 41462], ["image_updated_at", "2014-11-28 14:54:40.063892"], ["updated_at", "2014-11-28 14:54:40.088968"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles/5
+Completed 302 Found in 115ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/articles/5" for 127.0.0.1 at 2014-11-28 15:54:40 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered articles/show.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 107ms (Views: 105.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 15:54:40 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 15:54:40 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 15:54:40 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 15:54:40 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 15:54:40 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 15:54:40 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 15:54:40 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 15:54:40 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 15:54:40 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 15:54:40 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 15:54:40 +0100
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-28 15:54:45 +0100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 90ms (Views: 88.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-28 15:55:43 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 80ms (Views: 79.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 15:55:44 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 15:55:44 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 15:55:44 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 15:55:44 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 15:55:44 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 15:55:44 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 15:55:44 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 15:55:44 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 15:55:44 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 15:55:44 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 15:55:44 +0100
+
+
+Started GET "/articles/5" for 127.0.0.1 at 2014-11-28 15:55:45 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered articles/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 91ms (Views: 89.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/5" for 127.0.0.1 at 2014-11-28 15:55:47 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered articles/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 77ms (Views: 75.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 15:55:47 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 15:55:47 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 15:55:47 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 15:55:47 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 15:55:47 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 15:55:47 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 15:55:47 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 15:55:47 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 15:55:47 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 15:55:47 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 15:55:47 +0100
+
+
+Started GET "/articles/5" for 127.0.0.1 at 2014-11-28 15:58:11 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered articles/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 88ms (Views: 87.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 15:58:11 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 15:58:11 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 15:58:11 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 15:58:11 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 15:58:11 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 15:58:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 15:58:11 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 15:58:11 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 15:58:11 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 15:58:11 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 15:58:11 +0100
+
+
+Started GET "/articles/5" for 127.0.0.1 at 2014-11-28 15:58:41 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered articles/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 92ms (Views: 90.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 15:58:41 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 15:58:41 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 15:58:41 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 15:58:41 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 15:58:41 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 15:58:41 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 15:58:41 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 15:58:41 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 15:58:41 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 15:58:41 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 15:58:41 +0100
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-28 15:58:44 +0100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    13:   <tr>
+    14:     <td><%= article.title %></td>
+    15:     <td><%= article.text %></td>
+    16:     <td><%= image_tag @article.image %></td>
+    17:     <td><%= link_to 'Show', article_path(article) %></td>
+    18:     <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    19:     <td><%= link_to 'Destroy', article_path(article),
+  app/views/articles/index.html.erb:16:in `block in _app_views_articles_index_html_erb___81469235916226844_70155196550660'
+  app/views/articles/index.html.erb:12:in `_app_views_articles_index_html_erb___81469235916226844_70155196550660'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-28 15:58:44 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    13:   <tr>
+    14:     <td><%= article.title %></td>
+    15:     <td><%= article.text %></td>
+    16:     <td><%= image_tag @article.image %></td>
+    17:     <td><%= link_to 'Show', article_path(article) %></td>
+    18:     <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    19:     <td><%= link_to 'Destroy', article_path(article),
+  app/views/articles/index.html.erb:16:in `block in _app_views_articles_index_html_erb___81469235916226844_70155195667260'
+  app/views/articles/index.html.erb:12:in `_app_views_articles_index_html_erb___81469235916226844_70155195667260'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-28 15:59:01 +0100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 89ms (Views: 87.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 15:59:02 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 15:59:02 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 15:59:02 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 15:59:02 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 15:59:02 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 15:59:02 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 15:59:02 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 15:59:02 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 15:59:02 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 15:59:02 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 15:59:02 +0100
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2014-11-28 15:59:02 +0100
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.6ms)
+
+
+Started DELETE "/articles/4" for 127.0.0.1 at 2014-11-28 16:00:01 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Zkf529gwe6Ryztaj1hBfNv6UVdmu53WRRGssN/OFlOk=", "id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 9ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-28 16:00:01 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 89ms (Views: 88.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 16:00:01 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 16:00:01 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 16:00:01 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:01 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:01 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:01 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:01 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:01 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:01 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 16:00:01 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:01 +0100
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2014-11-28 16:00:01 +0100
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (36.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (66.2ms)
+
+
+Started DELETE "/articles/3" for 127.0.0.1 at 2014-11-28 16:00:07 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Zkf529gwe6Ryztaj1hBfNv6UVdmu53WRRGssN/OFlOk=", "id"=>"3"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 3]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 9ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-28 16:00:07 +0100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 99ms (Views: 97.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 16:00:07 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 16:00:07 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 16:00:07 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:07 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 16:00:07 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:07 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:07 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:07 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:07 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:07 +0100
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2014-11-28 16:00:07 +0100
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:07 +0100
+
+
+Started DELETE "/articles/2" for 127.0.0.1 at 2014-11-28 16:00:09 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Zkf529gwe6Ryztaj1hBfNv6UVdmu53WRRGssN/OFlOk=", "id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 2]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 7ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-28 16:00:09 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 102ms (Views: 100.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 16:00:09 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 16:00:09 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 16:00:09 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:09 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 16:00:09 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:09 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:09 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:09 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:09 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:09 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:09 +0100
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2014-11-28 16:00:09 +0100
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.6ms)
+
+
+Started DELETE "/articles/1" for 127.0.0.1 at 2014-11-28 16:00:11 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Zkf529gwe6Ryztaj1hBfNv6UVdmu53WRRGssN/OFlOk=", "id"=>"1"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 1]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 7ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-28 16:00:11 +0100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 90ms (Views: 88.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-11-28 16:00:11 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-28 16:00:11 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-28 16:00:11 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 16:00:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:11 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:11 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:11 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:11 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:11 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:11 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-11-28 16:00:11 +0100
