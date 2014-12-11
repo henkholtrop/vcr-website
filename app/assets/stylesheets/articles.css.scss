@@ -1,3 +1,42 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100italic,100,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+
+p {
+  font-family: 'Roboto', sans-serif;
+  &:first-child {
+    font-weight: 900;
+  }
+}
+
+article {
+  position: relative;
+}
+
+.article-row  {
+  display: table-row;
+}
+
+.article-image {
+  display: table-cell;
+  img {
+    height: 130px;
+    width: 220px;
+  }
+  
+}
+
+.article-title {
+  display: table-cell;
+  a {
+    color: #2A2A2A;
+    font-family: 'Roboto' sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

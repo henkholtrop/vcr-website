@@ -16,6 +16,10 @@ ActiveRecord::Schema.define(version: 20141128144506) do
   create_table "articles", force: true do |t|
     t.string   "title"
     t.text     "text"
+    t.string   "cover_image_file_name"
+    t.string   "cover_image_content_type"
+    t.integer  "cover_image_file_size"
+    t.datetime "cover_image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"

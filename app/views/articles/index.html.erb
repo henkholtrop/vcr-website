@@ -1,23 +1,22 @@
-<h1>Listing articles</h1>
+<h1>Nieuws</h1>
 
 <%= link_to 'New article', new_article_path %>
  
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="3"></th>
-  </tr>
- 
 <% @articles.each do |article| %>
-  <tr>
-    <td><%= article.title %></td>
-    <td><%= article.text %></td>
-    <td><%= image_tag article.image %></td>
-    <td><%= link_to 'Show', article_path(article) %></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
-    <td><%= link_to 'Destroy', article_path(article),
-                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<article>
+  <div class="article-row">
+    <div class="article-image">
+      <%= image_tag article.image %>
+      </div>
+    <div class="article-title">
+      <h2><%= link_to article.title, article_path(article) %></h2>
+    </div>
+  </div>
+  <button><%= link_to 'Show', article_path(article) %></button>
+  <button><%= link_to 'Edit', edit_article_path(article) %></button>
+  <button><%= link_to 'Destroy', article_path(article),
+                       method: :delete, data: { confirm: 'Are you sure?' } %></button>
+</article>
 <% end %>
+
 </table>
