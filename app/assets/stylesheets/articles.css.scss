@@ -2,41 +2,80 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100italic,100,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+@import 'grid';
 
 p {
   font-family: 'Roboto', sans-serif;
-  &:first-child {
-    font-weight: 900;
-  }
 }
 
-article {
+.box-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  color: #2A2A2A;
+  font-weight: 900;
+}
+
+.content-wrapper {
+  width: $website-width;
+  margin: 0 auto;
+}
+
+.article-wrapper {
+  width: $col-2;
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  margin: $side-margin;
+  padding: 25px;
+  background-color: #FFF;
+}
+
+.homepage-article {
   position: relative;
-}
-
-.article-row  {
-  display: table-row;
+  display: block;
+  width: 100%;
+  margin: 10px 0;
 }
 
 .article-image {
   display: table-cell;
+  width: $art-img;
+  overflow: hidden;
   img {
     height: 130px;
-    width: 220px;
   }
   
 }
 
 .article-title {
   display: table-cell;
+  padding-left: 15px;
+  vertical-align: middle;
+  font-size: 1em;
   a {
     color: #2A2A2A;
     font-family: 'Roboto' sans-serif;
-    font-weight: 700;
-    font-size: 21px;
+    font-weight: 900;
     text-decoration: none;
     &:hover {
       text-decoration: underline;
     }
   }
+}
+
+.article-date {
+  font-size: 1em;
+  font-weight: 400;
+  color: #DD5F2A;
+  margin: 0;
+}
+
+.program-sidebar {
+  display: block;
+  float: left;
+  margin: $side-margin;
+  width: $col-1;
+  padding: 25px;
+  box-sizing: border-box;
+  background-color: #FFF;
 }

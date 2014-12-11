@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+	margin: 0;
+	-webkit-font-smoothing: antialiased !important;
+}
+
+body {
+	margin: 0;
+	background-color: #EBEBEB;
+	font-size: 12pt;
+}
+
+h1, h2, h3, h4 {
+	margin: 0px;
+}

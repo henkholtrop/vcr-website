@@ -1,0 +1,20 @@
+<h1>Nieuws</h1>
+
+<%= link_to 'New article', new_article_path %>
+ 
+<% @articles.each do |article| %>
+<article>
+  <div class="article-row">
+    <div class="article-image">
+      <%= image_tag article.image %>
+      </div>
+    <div class="article-title">
+      <h2><%= link_to article.title, article_path(article) %></h2>
+    </div>
+  </div>
+  <button><%= link_to 'Show', article_path(article) %></button>
+  <button><%= link_to 'Edit', edit_article_path(article) %></button>
+  <button><%= link_to 'Destroy', article_path(article),
+                       method: :delete, data: { confirm: 'Are you sure?' } %></button>
+</article>
+<% end %>
