@@ -1,12 +1,14 @@
 <section class="content-wrapper">
   <div class="article-wrapper">
     <h1 class="box-title">Nieuws</h1>
-    <%= link_to 'New article', new_article_path %>
+    <button><%= link_to 'New article', new_article_path %></button>
     <% @articles.each do |article| %>
       <article class="homepage-article">
         <div class="article-row">
           <div class="article-image">
-            <%= image_tag article.image %>
+            <div class="article-image-wrapper">
+              <%= image_tag article.image %>
+            </div>
             </div>
           <div class="article-title">
             <p class="article-date"><%= article.created_at.strftime("%d %B %Y") %></p>
@@ -22,5 +24,8 @@
   </div>
   <aside class="program-sidebar">
     <h1 class="box-title">Programma VCR1</h1>
+  </aside>
+  <aside class="spotlight-sidebar">
+    <h1 class="box-title">Uitgelicht</h1>
   </aside>
 </section>
