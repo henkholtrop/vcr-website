@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require superslides
+ *= require font-awesome
  */
 
 html {
@@ -28,3 +30,5 @@ body {
 h1, h2, h3, h4 {
 	margin: 0px;
 }
+
+.clear { clear: both; }

@@ -2,11 +2,24 @@
 <html>
 <head>
   <title>VCR - Voetbalclub Rinsumageest</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<header>
+  <div class="content-wrapper">
+    <%= image_tag("vcr-logo.png", :alt => "vcr logo", :class => "vcr-logo") %>
+    <nav>
+      <a href="#"><li class="active-menu">Home</li></a>
+      <a href="#"><li>De Club <i class="fa fa-chevron-down fa-fw"></i></li></a>
+      <a href="#"><li>Teams <i class="fa fa-chevron-down fa-fw"></i></li></a>
+      <a href="#"><li>Nieuwsarchief</li></a>
+    </nav>
+  </div>
+</header>
 
 <%= yield %>
 

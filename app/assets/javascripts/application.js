@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery.superslides
+//= require jquery.superslides.min
+//= require smooth.scroll
+

@@ -3,13 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100italic,100,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
 @import 'grid';
+@import 'typography';
 
 p {
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-stack;
 }
 
 .box-title {
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-stack;
   font-size: 28px;
   color: #2A2A2A;
   font-weight: 900;
@@ -44,10 +45,15 @@ p {
   }
 }
 
+#slides {
+  margin-bottom: 40px;
+}
+
 .content-wrapper {
   width: $website-width;
   min-width: 1170px;
   margin: 0 auto;
+  height: auto;
 }
 
 .article-wrapper {
@@ -96,7 +102,7 @@ p {
   font-size: 1em;
   a {
     color: #2A2A2A;
-    font-family: 'Roboto' sans-serif;
+    font-family: $font-stack;
     font-weight: 900;
     text-decoration: none;
     &:hover {

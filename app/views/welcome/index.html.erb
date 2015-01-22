@@ -1,3 +1,60 @@
-<h1>Hello, Rails!</h1>
-<%= link_to 'My Blog', controller: 'articles' %>
+<div id="slides">
+  <ul class="slides-container">
+  <% @articles.each do |article| %>
+    <li>
+      <%= image_tag article.image %>
+      <div class="container">
+        <div class="slide-title">
+            <p class="slide-date"><%= article.created_at.strftime("%d %B %Y") %></p>
+            <h2><%= link_to article.title, article_path(article) %></h2>
+        </div>
+      </div>
+    </li>
+  <% end %>
+  </ul>
+  <nav class="slides-navigation">
+    <a href="#" class="next">Next</a>
+    <a href="#" class="prev">Previous</a>
+    <div class="scroll-to-content" href="#content"><a href="#content"><i class="fa fa-chevron-down"></i></a></div>
+  </nav>
+</div>
 
+<section class="content-wrapper">
+  <a id="content" href="#content"></a>
+  <div class="article-wrapper">
+    <h1 class="box-title">Nieuws</h1>
+    <button><%= link_to 'New article', new_article_path %></button>
+    <% @articles.each do |article| %>
+      <article class="homepage-article">
+        <div class="article-row">
+          <div class="article-image">
+            <div class="article-image-wrapper">
+              <%= image_tag article.image %>
+            </div>
+          </div>
+          <div class="article-title">
+            <p class="article-date"><%= article.created_at.strftime("%d %B %Y") %></p>
+            <h2><%= link_to article.title, article_path(article) %></h2>
+          </div>
+        </div>
+        <button><%= link_to 'Show', article_path(article) %></button>
+        <button><%= link_to 'Edit', edit_article_path(article) %></button>
+        <button><%= link_to 'Destroy', article_path(article),
+                             method: :delete, data: { confirm: 'Are you sure?' } %></button>
+      </article>
+    <% end %>
+  </div>
+  <aside class="program-sidebar">
+    <h1 class="box-title">Programma VCR1</h1>
+  </aside>
+  <aside class="spotlight-sidebar">
+    <h1 class="box-title">Uitgelicht</h1>
+  </aside>
+  <br class="clear" />
+</section>
+
+<script>
+    $('#slides').superslides({
+      animation: 'fade'
+    });
+  </script>

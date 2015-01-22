@@ -1,3 +1,101 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'typography';
+@import 'grid';
+
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 90px;
+  width: 100%;
+  z-index: 999;
+  padding: 0;
+  position: fixed;
+  nav {
+    float: right;
+    a {
+      text-decoration: none;
+      li {
+        list-style: none;
+        float: left;
+        color: #FFF;
+        font-family: $font-stack;
+        font-weight: 700;
+        font-size: 18px;
+        padding: 13px 15px; 
+        margin: 20px 0 20px 10px;
+        border-radius: 4px;
+      }
+      &:hover > li {
+        background-color: #000;
+      }
+    }
+  }
+}
+
+#content {
+  margin-top: -130px;
+  position: absolute;
+}
+
+.active-menu {
+  background-color: #F85824;
+}
+
+.vcr-logo {
+  width: 363px;
+  height: 61px;
+  margin-top: 14px;
+}
+
+.container {
+  position: absolute;
+  bottom: 100px;
+  left: 8.6666%;
+  width: 42%;
+  min-width: 450px;
+}
+
+.slide-title {
+  font-family: $font-stack;
+  font-weight: 700;
+  font-size: 36px;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
+  padding: 0;
+  a {
+    color: #FFFFFF;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.slide-date {
+  font-size: 16px;
+  color: #DD5F2A;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
+}
+
+.current {
+  background: #DD5F2A;
+}
+
+.scroll-to-content {
+  a {
+    height: 48px;
+    width: 48px;
+    background: rgba(221,95,42,0.85);
+    border-radius: 24px;
+    margin: 0 auto;
+    display: block;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    box-sizing: border-box;
+  }
+}
