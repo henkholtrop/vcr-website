@@ -11,7 +11,7 @@
 
 <header>
   <div class="content-wrapper">
-    <%= image_tag("vcr-logo.png", :alt => "vcr logo", :class => "vcr-logo") %>
+    <%= link_to image_tag("vcr-logo.png", :alt => "vcr logo", :class => "vcr-logo"), root_path %>
     <nav>
       <a href="#"><li class="active-menu">Home</li></a>
       <a href="#"><li>De Club <i class="fa fa-chevron-down fa-fw"></i></li></a>
@@ -23,5 +23,9 @@
 
 <%= yield %>
 
+<br class="clear" />
+<div class="grey-logo-wrapper">
+  <%= image_tag("vcr-logo_grey.png", :alt => "vcr logo", :class => "vcr-logo-grey") %>
+</div>
 </body>
 </html>

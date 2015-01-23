@@ -1,0 +1,26 @@
+<section class="content-wrapper">
+  <div class="article-wrapper">
+    <h1 class="box-title">VCR 1 Tegenstanders</h1>
+    <button><%= link_to 'New team', new_team_path %></button>
+    <% @teams.each do |team| %>
+      <article class="homepage-article">
+        <div class="article-row">
+          <div class="article-image">
+            <div class="article-image-wrapper">
+              
+              <%= image_tag team.logo %>
+            </div>
+          </div>
+          <div class="article-title">
+            <h2><%= team.title %></h2>
+          </div>
+        </div>
+        <button><%= link_to 'Show', team_path(team) %></button>
+        <button><%= link_to 'Edit', edit_team_path(team) %></button>
+        <button><%= link_to 'Destroy', team_path(team),
+                             method: :delete, data: { confirm: 'Are you sure?' } %></button>
+      </article>
+    <% end %>
+  </div>
+  <br class="clear" />
+</section>

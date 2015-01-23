@@ -1,9 +1,18 @@
+<div class="article-cover-image">
+  <%= image_tag @article.image %>
+</div>
+<div class="cover-image-clear">
+  <div class="show-container">
+    <div class="article-show-title">
+      <p class="article-show-date"><%= @article.created_at.strftime("%d %B %Y") %></p>
+      <h2><%= @article.title %></h2>
+    </div>
+  </div>  
+</div>
+
 <section class="content-wrapper">
-<div class="article-cover-image"><%= image_tag @article.image %></div>
 	<div class="article-wrapper">
-    	<h1 class="box-title"><%= @article.title %></h1>
-    	<p class="article-date"><%= @article.created_at.strftime("%d %B %Y") %></p>
-        <button><%= link_to 'Back', articles_path %></button>
+        <button><%= link_to 'Back', root_path %></button>
         <button><%= link_to 'Edit', edit_article_path(@article) %></button>
         <button><%= link_to 'Destroy', article_path(@article),
                              method: :delete, data: { confirm: 'Are you sure?' } %></button><br>

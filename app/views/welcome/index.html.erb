@@ -13,14 +13,12 @@
   <% end %>
   </ul>
   <nav class="slides-navigation">
-    <a href="#" class="next">Next</a>
-    <a href="#" class="prev">Previous</a>
-    <div class="scroll-to-content" href="#content"><a href="#content"><i class="fa fa-chevron-down"></i></a></div>
+    <a href="#" class="next"><i class="fa fa-chevron-right"></i></a>
+    <a href="#" class="prev"><i class="fa fa-chevron-left"></i></a>
   </nav>
 </div>
 
 <section class="content-wrapper">
-  <a id="content" href="#content"></a>
   <div class="article-wrapper">
     <h1 class="box-title">Nieuws</h1>
     <button><%= link_to 'New article', new_article_path %></button>
@@ -29,7 +27,8 @@
         <div class="article-row">
           <div class="article-image">
             <div class="article-image-wrapper">
-              <%= image_tag article.image %>
+              
+              <%= link_to "article #{image_tag(article.image)}".html_safe, "link_path" %>
             </div>
           </div>
           <div class="article-title">
@@ -57,4 +56,4 @@
     $('#slides').superslides({
       animation: 'fade'
     });
-  </script>
+</script>
