@@ -48820,3 +48820,3375 @@ Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-19 16:47:28 +0100
 
 
 Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-19 16:47:28 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 09:11:27 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (18.6ms)[0m  SELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6
+  Rendered welcome/index.html.erb within layouts/application (61.6ms)
+Completed 200 OK in 779ms (Views: 715.7ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/assets/fontawesome-webfont.woff?v=4.2.0" for 127.0.0.1 at 2015-03-20 09:11:29 +0100
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2015-03-20 09:11:59 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered articles/show.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 230ms (Views: 228.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 09:12:04 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6
+  Rendered welcome/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 214ms (Views: 212.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered games/index.html.erb within layouts/application (53.9ms)
+Completed 200 OK in 316ms (Views: 276.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:10 +0100
+
+
+Started DELETE "/games/3" for 127.0.0.1 at 2015-03-20 09:12:14 +0100
+Processing by GamesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"amH0/KkBjP6/HwgOpVCbWtPcmjmBCaEz5JlzsvnoYaQ=", "id"=>"3"}
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games"  WHERE "games"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "games" WHERE "games"."id" = ?  [["id", 3]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/games
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:12:14 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered games/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 202ms (Views: 200.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 09:12:15 +0100
+
+
+Started DELETE "/games/2" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+Processing by GamesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"amH0/KkBjP6/HwgOpVCbWtPcmjmBCaEz5JlzsvnoYaQ=", "id"=>"2"}
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE "games"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 2]]
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/games
+Completed 302 Found in 6ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  Rendered games/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 199ms (Views: 198.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 09:12:17 +0100
+
+
+Started GET "/games/new" for 127.0.0.1 at 2015-03-20 09:12:25 +0100
+Processing by GamesController#new as HTML
+  [1m[35mTeam Load (0.5ms)[0m  SELECT "teams".* FROM "teams"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/new.html.erb within layouts/application (380.5ms)
+Completed 200 OK in 611ms (Views: 609.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 09:12:26 +0100
+
+
+Started GET "/assets/fontawesome-webfont.woff?v=4.2.0" for 127.0.0.1 at 2015-03-20 09:12:27 +0100
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+Processing by TeamsController#new as HTML
+  Rendered teams/new.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 241ms (Views: 239.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 09:12:30 +0100
+
+
+Started POST "/teams" for 127.0.0.1 at 2015-03-20 09:13:16 +0100
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amH0/KkBjP6/HwgOpVCbWtPcmjmBCaEz5JlzsvnoYaQ=", "team"=>{"title"=>"FC Birdaard", "logo"=>#<ActionDispatch::Http::UploadedFile:0x007f90fe6b5f08 @tempfile=#<Tempfile:/var/folders/0h/7bkp_vq15b93htfjjp6czlbh0000gn/T/RackMultipart20150320-13343-1u7zagj>, @original_filename="FCBirdaard.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"team[logo]\"; filename=\"FCBirdaard.gif\"\r\nContent-Type: image/gif\r\n">}, "commit"=>"Create Team"}
+Command :: file -b --mime '/var/folders/0h/7bkp_vq15b93htfjjp6czlbh0000gn/T/cf637b8d57d5b3fb1085c8c93c6b5d4120150320-13343-1ng7nm5.gif'
+  [1m[35m (0.2ms)[0m  begin transaction
+Command :: file -b --mime '/var/folders/0h/7bkp_vq15b93htfjjp6czlbh0000gn/T/cf637b8d57d5b3fb1085c8c93c6b5d4120150320-13343-cukwki.gif'
+Binary data inserted for `string` type on column `logo_content_type`
+  [1m[36mSQL (17.5ms)[0m  [1mINSERT INTO "teams" ("created_at", "logo_content_type", "logo_file_name", "logo_file_size", "logo_updated_at", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-03-20 08:13:16.674139"], ["logo_content_type", "image/gif"], ["logo_file_name", "FCBirdaard.gif"], ["logo_file_size", 6424], ["logo_updated_at", "2015-03-20 08:13:16.593320"], ["title", "FC Birdaard"], ["updated_at", "2015-03-20 08:13:16.674139"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/teams
+Completed 302 Found in 134ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2015-03-20 09:13:16 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 260ms (Views: 259.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+
+Started GET "/logos/original/missing.png" for 127.0.0.1 at 2015-03-20 09:13:17 +0100
+
+ActionController::RoutingError (No route matches [GET] "/logos/original/missing.png"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.1ms)
+
+
+Started GET "/games/new" for 127.0.0.1 at 2015-03-20 09:13:45 +0100
+Processing by GamesController#new as HTML
+  [1m[35mTeam Load (0.2ms)[0m  SELECT "teams".* FROM "teams"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 213ms (Views: 211.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amH0/KkBjP6/HwgOpVCbWtPcmjmBCaEz5JlzsvnoYaQ=", "game"=>{"home_team"=>"3", "away_team"=>"6", "date(1i)"=>"2015", "date(2i)"=>"3", "date(3i)"=>"21", "date(4i)"=>"14", "date(5i)"=>"30"}, "commit"=>"Create Game"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "games" ("away_team", "created_at", "date", "home_team", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["away_team", 6], ["created_at", "2015-03-20 08:13:58.309435"], ["date", "2015-03-21 14:30:00.000000"], ["home_team", 3], ["updated_at", "2015-03-20 08:13:58.309435"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/games
+Completed 302 Found in 8ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered games/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 184ms (Views: 183.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 09:13:58 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 09:14:41 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6
+  Rendered welcome/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 219ms (Views: 218.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2015-03-20 09:15:24 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 182ms (Views: 180.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 09:16:24 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6
+  Rendered welcome/index.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 225ms (Views: 223.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/teams/2" for 127.0.0.1 at 2015-03-20 09:17:08 +0100
+Processing by TeamsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"amH0/KkBjP6/HwgOpVCbWtPcmjmBCaEz5JlzsvnoYaQ=", "id"=>"2"}
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 2]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/teams
+Completed 302 Found in 7ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2015-03-20 09:17:08 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 228ms (Views: 227.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started GET "/logos/original/missing.png" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+ActionController::RoutingError (No route matches [GET] "/logos/original/missing.png"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (69.1ms)
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 09:17:09 +0100
+
+
+Started DELETE "/teams/3" for 127.0.0.1 at 2015-03-20 09:17:13 +0100
+Processing by TeamsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"amH0/KkBjP6/HwgOpVCbWtPcmjmBCaEz5JlzsvnoYaQ=", "id"=>"3"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "teams" WHERE "teams"."id" = ?  [["id", 3]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+[paperclip] deleting /Users/henkholtrop/projects/vcr-website/public/system/teams/logos/000/000/003/original/actuele_oproep_3.png
+Redirected to http://127.0.0.1:3000/teams
+Completed 302 Found in 12ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2015-03-20 09:17:13 +0100
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 239ms (Views: 237.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/logos/original/missing.png" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/logos/original/missing.png"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (75.2ms)
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 09:17:14 +0100
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:17:18 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (33.9ms)
+Completed 500 Internal Server Error in 37ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb__1726169809357900671_70130358430620'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb__1726169809357900671_70130358430620'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.4ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2015-03-20 09:17:24 +0100
+Processing by TeamsController#new as HTML
+  Rendered teams/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 196ms (Views: 195.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amH0/KkBjP6/HwgOpVCbWtPcmjmBCaEz5JlzsvnoYaQ=", "team"=>{"title"=>"VCR"}, "commit"=>"Create Team"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "teams" ("created_at", "title", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-03-20 08:17:30.134760"], ["title", "VCR"], ["updated_at", "2015-03-20 08:17:30.134760"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/teams
+Completed 302 Found in 8ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.2ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 195ms (Views: 193.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/logos/original/missing.png" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+ActionController::RoutingError (No route matches [GET] "/logos/original/missing.png"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (47.1ms)
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 09:17:30 +0100
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:17:48 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb__1726169809357900671_70130358430620'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb__1726169809357900671_70130358430620'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 09:49:41 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6
+  Rendered welcome/index.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 386ms (Views: 368.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/assets/fontawesome-webfont.woff?v=4.2.0" for 127.0.0.1 at 2015-03-20 09:49:42 +0100
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:49:45 +0100
+Processing by GamesController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `params' for nil:NilClass):
+  app/controllers/games_controller.rb:4:in `index'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (50.7ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:50:04 +0100
+Processing by GamesController#index as HTML
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: game):
+  app/controllers/games_controller.rb:51:in `game_params'
+  app/controllers/games_controller.rb:4:in `index'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.8ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:51:56 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (19.8ms)
+Completed 500 Internal Server Error in 45ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.5ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:55:48 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.5ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 19ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.4ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:55:49 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.6ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:55:50 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.2ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:55:50 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:55:51 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.9ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:55:51 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 12ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.2ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:55:51 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.1ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:56:06 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (13.3ms)
+Completed 500 Internal Server Error in 20ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.4ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:56:07 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.2ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:56:08 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (19.1ms)
+Completed 500 Internal Server Error in 22ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.9ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:56:08 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:57:52 +0100
+Processing by GamesController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `includes?' for [nil, nil]:Array):
+  app/controllers/games_controller.rb:6:in `index'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.7ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:58:29 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.5ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (17.3ms)
+Completed 500 Internal Server Error in 23ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6[0m
+  Rendered welcome/index.html.erb within layouts/application (43.8ms)
+Completed 200 OK in 243ms (Views: 236.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 09:58:40 +0100
+
+
+Started GET "/assets/fontawesome-webfont.woff?v=4.2.0" for 127.0.0.1 at 2015-03-20 09:58:41 +0100
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:58:43 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 7ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:59:39 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.7ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (14.7ms)
+Completed 500 Internal Server Error in 20ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.1ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:59:40 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.2ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 09:59:41 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 7ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.9ms)
+  [1m[36mGame Load (1.8ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE "games"."home_team" = 3 LIMIT 1[0m
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games"  WHERE "games"."home_team" = 3 LIMIT 1
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE "games"."home_team" = 3 LIMIT 1[0m
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:02:19 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 8ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.3ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:02:21 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.6ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:02:21 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.7ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:02:22 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 9ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:02:22 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 14ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=3):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___478267647576081910_70152977572180'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___478267647576081910_70152977572180'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.5ms)
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games"  WHERE "games"."home_team" = 3 LIMIT 1
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE "games"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"  WHERE "teams"."game_id" = ?[0m  [[nil, 4]]
+SQLite3::SQLException: no such column: teams.game_id: SELECT "teams".* FROM "teams"  WHERE "teams"."game_id" = ?
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mSQL (3.1ms)[0m  [1mDELETE FROM "games" WHERE (home_team = 3)[0m
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:03:57 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  Rendered games/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 367ms (Views: 350.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 10:03:58 +0100
+
+
+Started GET "/games/new" for 127.0.0.1 at 2015-03-20 10:04:01 +0100
+Processing by GamesController#new as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/new.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 264ms (Views: 261.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2015-03-20 10:04:07 +0100
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amH0/KkBjP6/HwgOpVCbWtPcmjmBCaEz5JlzsvnoYaQ=", "game"=>{"home_team"=>"5", "away_team"=>"4", "date(1i)"=>"2015", "date(2i)"=>"3", "date(3i)"=>"20", "date(4i)"=>"09", "date(5i)"=>"04"}, "commit"=>"Create Game"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "games" ("away_team", "created_at", "date", "home_team", "updated_at") VALUES (?, ?, ?, ?, ?)  [["away_team", 4], ["created_at", "2015-03-20 09:04:07.608099"], ["date", "2015-03-20 09:04:00.000000"], ["home_team", 5], ["updated_at", "2015-03-20 09:04:07.608099"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/games
+Completed 302 Found in 11ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:04:07 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered games/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 211ms (Views: 209.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:07 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 10:04:08 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 10:04:10 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6[0m
+  Rendered welcome/index.html.erb within layouts/application (43.8ms)
+Completed 200 OK in 250ms (Views: 244.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/assets/fontawesome-webfont.woff?v=4.2.0" for 127.0.0.1 at 2015-03-20 10:04:11 +0100
+
+
+Started GET "/teams" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.2ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 205ms (Views: 203.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started GET "/logos/original/missing.png" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/logos/original/missing.png"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (88.4ms)
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 10:04:14 +0100
+
+
+Started DELETE "/teams/5" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+Processing by TeamsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"amH0/KkBjP6/HwgOpVCbWtPcmjmBCaEz5JlzsvnoYaQ=", "id"=>"5"}
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/teams
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 235ms (Views: 233.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+
+Started GET "/logos/original/missing.png" for 127.0.0.1 at 2015-03-20 10:04:20 +0100
+
+ActionController::RoutingError (No route matches [GET] "/logos/original/missing.png"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.5ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:04:23 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered games/index.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 11ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=5):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___2672222953126030091_70358388494420'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___2672222953126030091_70358388494420'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:06:23 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered games/index.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 21ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=5):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___2672222953126030091_70358388494420'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___2672222953126030091_70358388494420'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.6ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:06:23 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered games/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=5):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___2672222953126030091_70358388494420'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___2672222953126030091_70358388494420'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.5ms)
+  [1m[35mSQL (3.1ms)[0m  DELETE FROM "games" WHERE (home_team = 5)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:06:47 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  Rendered games/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 202ms (Views: 201.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 10:06:48 +0100
+
+
+Started GET "/games/new" for 127.0.0.1 at 2015-03-20 10:06:52 +0100
+Processing by GamesController#new as HTML
+  [1m[36mTeam Load (0.9ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 214ms (Views: 212.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2015-03-20 10:06:59 +0100
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amH0/KkBjP6/HwgOpVCbWtPcmjmBCaEz5JlzsvnoYaQ=", "game"=>{"home_team"=>"4", "away_team"=>"6", "date(1i)"=>"2015", "date(2i)"=>"3", "date(3i)"=>"20", "date(4i)"=>"09", "date(5i)"=>"06"}, "commit"=>"Create Game"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "games" ("away_team", "created_at", "date", "home_team", "updated_at") VALUES (?, ?, ?, ?, ?)  [["away_team", 6], ["created_at", "2015-03-20 09:06:59.505440"], ["date", "2015-03-20 09:06:00.000000"], ["home_team", 4], ["updated_at", "2015-03-20 09:06:59.505440"]]
+  [1m[36m (5.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/games
+Completed 302 Found in 16ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:06:59 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered games/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 197ms (Views: 195.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:59 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:59 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:59 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:59 +0100
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:59 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:59 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:59 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:59 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:59 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 10:06:59 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 10:06:59 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 10:06:59 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 10:06:59 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 10:06:59 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:00 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:00 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:00 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:00 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:00 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:00 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:00 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:00 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 10:07:00 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 10:07:00 +0100
+
+
+Started DELETE "/teams/4" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+Processing by TeamsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"amH0/KkBjP6/HwgOpVCbWtPcmjmBCaEz5JlzsvnoYaQ=", "id"=>"4"}
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/teams
+Completed 302 Found in 34ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 195ms (Views: 193.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/logos/original/missing.png" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+ActionController::RoutingError (No route matches [GET] "/logos/original/missing.png"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (20.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (89.9ms)
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 10:07:08 +0100
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:07:11 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (1.1ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered games/index.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 7ms
+
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=4):
+  app/views/games/index.html.erb:11:in `block in _app_views_games_index_html_erb___2672222953126030091_70358388494420'
+  app/views/games/index.html.erb:7:in `_app_views_games_index_html_erb___2672222953126030091_70358388494420'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.4ms)
+  [1m[36mSQL (6.3ms)[0m  [1mDELETE FROM "games" WHERE (home_team = 4)[0m
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:07:45 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  Rendered games/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 228ms (Views: 227.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 10:07:46 +0100
+
+
+Started GET "/games/new" for 127.0.0.1 at 2015-03-20 10:09:09 +0100
+Processing by GamesController#new as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 198ms (Views: 196.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amH0/KkBjP6/HwgOpVCbWtPcmjmBCaEz5JlzsvnoYaQ=", "game"=>{"home_team"=>"6", "away_team"=>"7", "date(1i)"=>"2015", "date(2i)"=>"3", "date(3i)"=>"20", "date(4i)"=>"09", "date(5i)"=>"09"}, "commit"=>"Create Game"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "games" ("away_team", "created_at", "date", "home_team", "updated_at") VALUES (?, ?, ?, ?, ?)  [["away_team", 7], ["created_at", "2015-03-20 09:09:13.279735"], ["date", "2015-03-20 09:09:00.000000"], ["home_team", 6], ["updated_at", "2015-03-20 09:09:13.279735"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/games
+Completed 302 Found in 16ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered games/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 193ms (Views: 192.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 10:09:13 +0100
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:16:33 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered games/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 206ms (Views: 201.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 10:16:34 +0100
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:16:35 +0100
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date DESC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered games/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 200ms (Views: 198.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 10:16:36 +0100
+
+
+Started GET "/teams" for 127.0.0.1 at 2015-03-20 10:16:40 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 228ms (Views: 227.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/logos/original/missing.png" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+ActionController::RoutingError (No route matches [GET] "/logos/original/missing.png"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (51.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.7ms)
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 10:16:41 +0100
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2015-03-20 10:16:43 +0100
+Processing by TeamsController#new as HTML
+  Rendered teams/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 225ms (Views: 224.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 127.0.0.1 at 2015-03-20 10:16:45 +0100
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amH0/KkBjP6/HwgOpVCbWtPcmjmBCaEz5JlzsvnoYaQ=", "team"=>{"title"=>"sdgzdffgb"}, "commit"=>"Create Team"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "teams" ("created_at", "title", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-03-20 09:16:45.861361"], ["title", "sdgzdffgb"], ["updated_at", "2015-03-20 09:16:45.861361"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/teams
+Completed 302 Found in 10ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2015-03-20 10:16:45 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 201ms (Views: 200.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/logos/original/missing.png" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+ActionController::RoutingError (No route matches [GET] "/logos/original/missing.png"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (15.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (73.4ms)
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 10:16:46 +0100
+
+
+Started GET "/games/new" for 127.0.0.1 at 2015-03-20 10:16:54 +0100
+Processing by GamesController#new as HTML
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 221ms (Views: 219.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amH0/KkBjP6/HwgOpVCbWtPcmjmBCaEz5JlzsvnoYaQ=", "game"=>{"home_team"=>"8", "away_team"=>"6", "date(1i)"=>"2015", "date(2i)"=>"3", "date(3i)"=>"20", "date(4i)"=>"09", "date(5i)"=>"16"}, "commit"=>"Create Game"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "games" ("away_team", "created_at", "date", "home_team", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["away_team", 6], ["created_at", "2015-03-20 09:16:58.117589"], ["date", "2015-03-20 09:16:00.000000"], ["home_team", 8], ["updated_at", "2015-03-20 09:16:58.117589"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/games
+Completed 302 Found in 8ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date DESC[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered games/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 209ms (Views: 208.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/grid.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/superslides.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/typography.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/jquery.superslides.min.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/jquery.superslides.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/smooth.scroll.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/vcr-logo.png" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started GET "/assets/vcr-logo_grey.png" for 127.0.0.1 at 2015-03-20 10:16:58 +0100
+
+
+Started DELETE "/teams/8" for 127.0.0.1 at 2015-03-20 10:17:05 +0100
+Processing by TeamsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"amH0/KkBjP6/HwgOpVCbWtPcmjmBCaEz5JlzsvnoYaQ=", "id"=>"8"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 8]]
+Completed 500 Internal Server Error in 4ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/teams_controller.rb:43:in `destroy'
+
+
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/henkholtrop/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.1ms)

@@ -4,5 +4,5 @@ class Team < ActiveRecord::Base
 
   has_attached_file :logo
   validates_attachment_content_type :logo, content_type: /\Aimage\/.*\Z/
-  belongs_to :game
+  belongs_to :game, dependent: :destroy
 end
