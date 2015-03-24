@@ -38,16 +38,21 @@ class TeamsController < ApplicationController
 
   def destroy
     @team = Team.find(params[:id])
-    
-    @game1 = Game.where(home_team = @team)
-    @game1.destroy
+    @home_team = Game.where(["home_team = ?", @team])
+    @away_team = Game.where(["away_team = ?", @team])
 
-    @game2 = Game.where(away_team = @team)
-    @game2.destroy
-
-    @team.destroy
- 
-    redirect_to teams_path
+    if !@home_team.present? && !@away_team.present?
+      @team.destroy
+      redirect_to teams_path
+    elsif @home_team.present?
+      Game.delete_all(["home_team = ?", @team])
+      @team.destroy
+      redirect_to teams_path
+    elsif @away_team.present?
+      Game.delete_all(["away_team = ?", @team])
+      @team.destroy
+      redirect_to teams_path
+    end
   end
 
 private
