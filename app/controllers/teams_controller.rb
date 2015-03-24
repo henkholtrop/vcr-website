@@ -44,6 +44,11 @@ class TeamsController < ApplicationController
     if !@home_team.present? && !@away_team.present?
       @team.destroy
       redirect_to teams_path
+    elsif @home_team.present? && @away_team.present?
+      Game.delete_all(["home_team = ?", @team])
+      Game.delete_all(["away_team = ?", @team])
+      @team.destroy
+      redirect_to teams_path
     elsif @home_team.present?
       Game.delete_all(["home_team = ?", @team])
       @team.destroy
