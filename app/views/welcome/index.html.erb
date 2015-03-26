@@ -20,40 +20,79 @@
 
 <section class="content-wrapper">
   <div class="article-wrapper">
-    <h1 class="box-title">Nieuws</h1>
-    <button><%= link_to 'New article', new_article_path %></button>
+    <h1 class="box-title"><%= link_to 'Nieuws', articles_path %></h1>
     <% @articles.each do |article| %>
       <article class="homepage-article">
         <div class="article-row">
-          <div class="article-image">
-            <div class="article-image-wrapper">
-              
-              <%= link_to "article #{image_tag(article.image)}".html_safe, "link_path" %>
-            </div>
+          <div class="article-image" style="background: url(<%= article.image %>);background-position: center; background-size: cover;">
           </div>
           <div class="article-title">
             <p class="article-date"><%= article.created_at.strftime("%d %B %Y") %></p>
             <h2><%= link_to article.title, article_path(article) %></h2>
           </div>
         </div>
-        <button><%= link_to 'Show', article_path(article) %></button>
-        <button><%= link_to 'Edit', edit_article_path(article) %></button>
-        <button><%= link_to 'Destroy', article_path(article),
-                             method: :delete, data: { confirm: 'Are you sure?' } %></button>
       </article>
     <% end %>
+    <%= link_to 'Bekijk al het nieuws', articles_path, :class => 'orange-link' %>
   </div>
+
   <aside class="program-sidebar">
     <h1 class="box-title">Programma VCR1</h1>
+    <div class="games-wrapper">
+      <% @games.each do |game| %>
+        <div class="game">
+          <div class="game-date"><%= game.date.strftime("%d %B %Y") %></div>
+          <div class="teamlogo-container">
+            <div class="teamlogo" style="background: url(<%= Team.find(game.home_team).logo %>);background-position: center; background-size: contain;">
+            </div>
+            <div class="teamlogo" style="background: url(<%= Team.find(game.away_team).logo %>);background-position: center; background-size: contain;">
+            </div>
+          </div>
+          <div class="teamname-container">
+            <div class="teamname"><%= Team.find(game.home_team).title %></div>
+            <div class="teamname"><%= Team.find(game.away_team).title %></div>
+          </div>
+        </div>
+      <% end %>
+    </div>  
+    <%= link_to 'Compleet programma VCR 1', games_path, :class => 'orange-link' %>
   </aside>
+  
   <aside class="spotlight-sidebar">
     <h1 class="box-title">Uitgelicht</h1>
   </aside>
   <br class="clear" />
+  
+  <div class="sponsor-wrapper">
+    <div id="owl-demo" class="owl-carousel owl-theme">
+    <% @sponsors.each do |sponsor| %>
+      <div class="item" style="background: url(<%= sponsor.logo %>) no-repeat;background-position: center; background-size: contain; -webkit-filter: grayscale(100%);"></div>
+    <% end %>
+    </div>
+  </div>
+
 </section>
 
 <script>
-    $('#slides').superslides({
-      animation: 'fade'
-    });
+$('#slides').superslides({
+  animation: 'fade'
+});
+
+$(document).ready(function() {
+ 
+  var owl = $("#owl-demo");
+ 
+  owl.owlCarousel({
+      items : 5,
+      itemsDesktop : [1024,4],
+      itemsDesktopSmall : [900,3],
+      itemsTablet: [600,2],
+      itemsMobile : false,
+      autoHeight : '90px',
+      autoPlay : 7500,
+      pagination : false,
+      center : true,
+      margin : 20
+  });
+});
 </script>

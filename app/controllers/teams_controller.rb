@@ -38,13 +38,6 @@ class TeamsController < ApplicationController
 
   def destroy
     @team = Team.find(params[:id])
-    
-    @game1 = Game.where(home_team = @team)
-    @game1.destroy
-
-    @game2 = Game.where(away_team = @team)
-    @game2.destroy
-
     @team.destroy
  
     redirect_to teams_path

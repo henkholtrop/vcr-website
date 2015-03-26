@@ -23,6 +23,8 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @sponsors = Sponsor.all
+    @games = Game.where('date >= ?', Date.today).order('date ASC').limit(3)
   end
 
   def update

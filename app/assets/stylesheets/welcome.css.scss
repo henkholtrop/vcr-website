@@ -6,7 +6,7 @@
 @import 'grid';
 
 header {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   height: 90px;
   width: 100%;
   z-index: 999;
@@ -30,6 +30,41 @@ header {
       &:hover > li {
         background-color: #000;
       }
+    }
+  }
+}
+
+.club-dropdown-wrapper {
+ position: fixed;
+ margin-top: 11px;
+ background-color: rgba(0, 0, 0, 0.7);
+ display: inline-block;
+ width: 100%;
+ padding: 50px 0;
+ z-index: 999;
+}
+
+.club-dropdown {
+  width: $website-width;
+  margin: auto;
+}
+
+.dropdown-list {
+  float: left;
+  width: $col-4;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: $font-stack;
+  font-weight: 600;
+  font-size: 18px;
+  color: #DD5F2A;
+  padding: 0;
+  margin: 0; 
+  li {
+    color: #FFFFFF;
+    font-weight: 400;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
@@ -64,7 +99,7 @@ header {
   margin-left: -41.665%;
   padding: 0 20px;
   width: $website-width;
-  min-width: 1170px;
+  min-width: 11s70px;
 }
 
 #slides:hover > .slides-navigation {
@@ -129,17 +164,61 @@ header {
   }
 }
 
-.scroll-to-content {
-  a {
-    height: 48px;
-    width: 48px;
-    background: rgba(221,95,42,0.85);
-    border-radius: 24px;
-    margin: 0 auto;
-    display: block;
-    color: white;
-    text-align: center;
-    padding-top: 15px;
-    box-sizing: border-box;
+.games-wrapper {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.game {
+  padding: 17px 0 21px 0;
+  border-top: 1px solid #DEDEDE;
+  display: inline-block;
+  width: 100%;
+  &:nth-child(3) {
+    margin-top: 16px;
+    border-bottom: 1px solid #DEDEDE;
+  }
+  &:before {
+    margin-top: 16px;
+  }
+}
+
+.game-date {
+  display: block;
+  font-family: $font-stack;
+  font-size: 14px;
+  color: #9B9B9B;
+  margin-bottom: 10px;
+}
+
+.teamlogo-container {
+  display: block;
+  float: left;
+}
+
+.teamlogo {
+  height: 50px;
+  width: 50px;
+  float: left;
+  background-position: center;
+  background-size: cover;
+  &:nth-child(2) {
+    margin-left: 10px;
+  }
+}
+
+.teamname-container {
+  margin-left: 20px;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+}
+
+.teamname {
+  font-family: $font-stack;
+  font-size: 16px;
+  color: #383838;
+  &:nth-child(2) {
+    margin-top: 5px;
   }
 }

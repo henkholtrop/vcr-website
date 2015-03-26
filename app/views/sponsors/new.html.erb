@@ -1,0 +1,35 @@
+<section class="content-wrapper">
+    <div class="article-wrapper">
+      <%= form_for Sponsor.new do |f| %>
+
+      <% if @sponsor.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@sponsor.errors.count, "error") %> prohibited
+            this sponsor from being saved:
+          </h2>
+          <ul>
+            <% @sponsor.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+        <p>
+          <%= f.label :title %><br>
+          <%= f.text_field :title %>
+        </p>
+       
+        <p>
+          <%= f.label :logo %><br>
+          <%= f.file_field :logo %>
+        </p>
+
+        <p>
+          <%= f.submit %>
+        </p>
+      <% end %>
+    </div>
+  <br class="clear" />
+</section>

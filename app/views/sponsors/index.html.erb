@@ -1,0 +1,26 @@
+<section class="content-wrapper">
+  <div class="article-wrapper">
+    <h1 class="box-title">VCR Sponsoren</h1>
+    <button><%= link_to 'Sponsor toevoegen', new_sponsor_path %></button>
+    <% @sponsors.each do |sponsor| %>
+      <article class="homepage-article">
+        <div class="article-row">
+          <div class="article-image">
+            <div class="article-image-wrapper">
+              
+              <%= image_tag sponsor.logo %>
+            </div>
+          </div>
+          <div class="article-title">
+            <h2><%= sponsor.title %></h2>
+          </div>
+        </div>
+        <button><%= link_to 'Show', sponsor_path(sponsor) %></button>
+        <button><%= link_to 'Edit', edit_sponsor_path(sponsor) %></button>
+        <button><%= link_to 'Destroy', sponsor_path(sponsor),
+                             method: :delete, data: { confirm: 'Are you sure?' } %></button>
+      </article>
+    <% end %>
+  </div>
+  <br class="clear" />
+</section>

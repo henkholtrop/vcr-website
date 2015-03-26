@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'quiet_assets'
 gem "paperclip", "~> 4.2"
 gem 'font-awesome-rails', '~> 4.2.0.0'
 

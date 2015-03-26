@@ -12,16 +12,31 @@
 
 <section class="content-wrapper">
 	<div class="article-wrapper">
-        <button><%= link_to 'Back', root_path %></button>
-        <button><%= link_to 'Edit', edit_article_path(@article) %></button>
-        <button><%= link_to 'Destroy', article_path(@article),
-                             method: :delete, data: { confirm: 'Are you sure?' } %></button><br>
         <div class="article-text">
         	<%= simple_format @article.text %>
         </div>
     </div>
   <aside class="program-sidebar">
     <h1 class="box-title">Programma VCR1</h1>
+    <div class="games-wrapper">
+      <% @games.each do |game| %>
+        <div class="game">
+          <div class="game-date"><%= game.date.strftime("%d %B %Y") %></div>
+          <div class="teamlogo-container">
+            <div class="teamlogo" style="background: url(<%= Team.find(game.home_team).logo %>);background-position: center; background-size: contain;">
+            </div>
+            <div class="teamlogo" style="background: url(<%= Team.find(game.away_team).logo %>);background-position: center; background-size: contain;">
+              
+            </div>
+          </div>
+          <div class="teamname-container">
+            <div class="teamname"><%= Team.find(game.home_team).title %></div>
+            <div class="teamname"><%= Team.find(game.away_team).title %></div>
+          </div>
+        </div>
+      <% end %>
+    </div>  
+    <%= link_to 'Compleet programma VCR 1', games_path, :class => 'orange-link' %>
   </aside>
   <aside class="spotlight-sidebar">
     <h1 class="box-title">Uitgelicht</h1>
