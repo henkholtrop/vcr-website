@@ -1,11 +1,15 @@
 class GamesController < ApplicationController
 
   def index
-    @games = Game.all.order('date DESC')
+    @games = Game.all.order('date ASC')
   end
 
   def new
     @game = Game.new
+  end
+
+  def edit
+    @game = Game.find(params[:id])
   end
 
   def create
@@ -26,7 +30,7 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
    
     if @game.update(game_params)
-      redirect_to @game
+      redirect_to games_path
     else
       render 'edit'
     end
