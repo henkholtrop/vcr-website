@@ -1,8 +1,10 @@
 <section class="content-wrapper">
+  <div class="article-wrapper"></div>
   <div class="article-wrapper">
     <h1 class="box-title">Nieuws</h1>
     <button class="button-green"><%= link_to 'Nieuw bericht plaatsen', new_article_path %></button>
     <% @articles.each do |article| %>
+    <div class="clear"></div>
       <article class="homepage-article">
         <div class="article-row">
           <div class="article-image" style="background: url(<%= article.image %>);background-position: center; background-size: cover;">
@@ -13,6 +15,7 @@
             <h2><%= link_to article.title, article_path(article) %></h2>
           </div>
         </div>
+        <div class="clear"> </div>
               <button class="button-blue"><%= link_to 'Bewerk bericht', edit_article_path(article) %></button>
               <button class="button-red"><%= link_to 'Verwijder bericht', article_path(article),
                                              method: :delete, data: { confirm: 'Are you sure?' } %></button>        

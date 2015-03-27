@@ -1,0 +1,2 @@
+module VcrTeamsHelper
+end
