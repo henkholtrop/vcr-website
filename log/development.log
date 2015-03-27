@@ -60878,3 +60878,58 @@ Processing by GamesController#index as HTML
   Rendered games/index.html.erb within layouts/application (0.8ms)
 Completed 200 OK in 158ms (Views: 157.7ms | ActiveRecord: 0.2ms)
 >>>>>>> f1d7283e082e106d400bc3b3e8ad96bdca219673
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-27 10:44:47 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 41ms
+
+SyntaxError (/Users/peteralserda/Projects/vcr-website/app/models/game.rb:2: syntax error, unexpected <<
+<<<<<<< HEAD
+  ^
+/Users/peteralserda/Projects/vcr-website/app/models/game.rb:4: syntax error, unexpected ===, expecting keyword_end
+=======
+   ^
+/Users/peteralserda/Projects/vcr-website/app/models/game.rb:6: syntax error, unexpected >>, expecting keyword_end
+>>>>>>> f1d7283e082e106d400bc3b3e8ad96bdca219673
+  ^):
+  app/models/game.rb:2: syntax error, unexpected <<
+  app/models/game.rb:4: syntax error, unexpected ===, expecting keyword_end
+  app/models/game.rb:6: syntax error, unexpected >>, expecting keyword_end
+  app/controllers/welcome_controller.rb:10:in `index'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-27 10:45:39 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-03-27')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT "sponsors".* FROM "sponsors"
+  Rendered welcome/index.html.erb within layouts/application (81.6ms)
+Completed 200 OK in 1698ms (Views: 1648.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-27 10:46:21 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6[0m
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games"  WHERE (date >= '2015-03-27')  ORDER BY date ASC LIMIT 3
+  [1m[36mSponsor Load (0.1ms)[0m  [1mSELECT "sponsors".* FROM "sponsors"[0m
+  Rendered welcome/index.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 333ms (Views: 322.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-27 10:46:47 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-03-27')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mSponsor Load (0.1ms)[0m  SELECT "sponsors".* FROM "sponsors"
+  Rendered welcome/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 298ms (Views: 287.1ms | ActiveRecord: 1.5ms)
