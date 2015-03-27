@@ -18,4 +18,5 @@
 //= require jquery.superslides.min
 //= require smooth.scroll
 //= require owl.carousel.min
+//= require froala_editor.min.js
 

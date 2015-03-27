@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'quiet_assets'
 gem "paperclip", "~> 4.2"
 gem 'font-awesome-rails', '~> 4.2.0.0'
+gem "wysiwyg-rails"
 
 gem 'rails', '4.1.8'
 gem 'sqlite3'
@@ -14,4 +15,3 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
-gem 'quiet_assets'

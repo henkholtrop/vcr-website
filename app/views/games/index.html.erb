@@ -2,20 +2,26 @@
   <div class="article-wrapper">.</div>
   <div class="article-wrapper">
     <h1 class="box-title">Wedstrijden VCR 1</h1>
-    <button><%= link_to 'Nieuwe wedstrijd', new_game_path %></button>
+    <button class="button-green"><%= link_to 'Nieuwe wedstrijd', new_game_path %></button>
 
   <table id="games_table">
     <% @games.each do |game| %>
       <tr>
         <td><%= game.id %></td>
-        <td><%= game.date.strftime("%d %B %Y") %></td>
+        <td><%= game.date.strftime("%-d %B %Y, %H:%M")%></td>
         <td><%= Team.find(game.home_team).title %></td>
         <td><%= game.home_score %> - </td>
         <td><%= game.away_score %></td>
         <td><%= Team.find(game.away_team).title %></td>
-        <td><button><%= link_to 'Edit', edit_game_path(game) %></button></td>
-        <td><button><%= link_to 'Destroy', game_path(game),
-                           method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+        <td><button class="button-blue"><%= link_to edit_game_path(game) do %>
+          <i class="fa fa-edit"></i>
+        <% end %>
+        </button></td>
+        <td><button class="button-red"><%= link_to game_path(game),
+                           method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
+        </button></td>
       </tr>
     <% end %>
   </table>
