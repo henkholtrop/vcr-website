@@ -66734,3 +66734,639 @@ Processing by WelcomeController#index as HTML
   [1m[36mSponsor Load (0.2ms)[0m  [1mSELECT "sponsors".* FROM "sponsors"[0m
   Rendered welcome/index.html.erb within layouts/application (38.8ms)
 Completed 200 OK in 400ms (Views: 397.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2015-03-27 16:42:59 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-03-27')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered articles/show.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 366ms (Views: 363.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-27 16:53:58 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-03-27')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT "sponsors".* FROM "sponsors"
+  Rendered welcome/index.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 393ms (Views: 390.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-03-27 16:54:02 +0100
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date ASC[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered games/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 462ms (Views: 459.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-27 16:54:06 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-03-27')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT "sponsors".* FROM "sponsors"
+  Rendered welcome/index.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 385ms (Views: 382.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-27 16:54:42 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mArticle Load (1.2ms)[0m  [1mSELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6[0m
+  [1m[35mGame Load (0.4ms)[0m  SELECT  "games".* FROM "games"  WHERE (date >= '2015-03-27')  ORDER BY date ASC LIMIT 3
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT "sponsors".* FROM "sponsors"[0m
+  Rendered welcome/index.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 434ms (Views: 430.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-01 14:50:30 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (15.7ms)[0m  SELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6
+  [1m[36mGame Load (0.5ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT "sponsors".* FROM "sponsors"
+  Rendered welcome/index.html.erb within layouts/application (211.7ms)
+Completed 200 OK in 1783ms (Views: 1582.6ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-04-01 14:50:53 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games"   ORDER BY date ASC[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered games/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 392ms (Views: 389.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/6" for 127.0.0.1 at 2015-04-01 14:50:59 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered articles/show.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 369ms (Views: 366.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-01 14:51:11 +0200
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT "sponsors".* FROM "sponsors"
+  Rendered welcome/index.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 358ms (Views: 355.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-04-01 14:51:17 +0200
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"   ORDER BY created_at DESC[0m
+  [1m[35mGame Load (0.4ms)[0m  SELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered articles/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 369ms (Views: 366.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-04-01 14:52:01 +0200
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"   ORDER BY created_at DESC[0m
+  [1m[35mGame Load (0.4ms)[0m  SELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered articles/index.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 409ms (Views: 406.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-01 15:06:39 +0200
+Processing by WelcomeController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mSponsor Load (0.2ms)[0m  [1mSELECT "sponsors".* FROM "sponsors"[0m
+  Rendered welcome/index.html.erb within layouts/application (35.1ms)
+Completed 200 OK in 435ms (Views: 433.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-04-01 15:06:42 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games"   ORDER BY date ASC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered games/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 388ms (Views: 386.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-01 15:06:50 +0200
+Processing by WelcomeController#index as HTML
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mSponsor Load (0.2ms)[0m  [1mSELECT "sponsors".* FROM "sponsors"[0m
+  Rendered welcome/index.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 355ms (Views: 352.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2015-04-01 15:06:56 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games"   ORDER BY date ASC
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered games/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 334ms (Views: 332.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-01 15:07:04 +0200
+Processing by WelcomeController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT "sponsors".* FROM "sponsors"[0m
+  Rendered welcome/index.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 369ms (Views: 366.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-01 15:07:26 +0200
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT "sponsors".* FROM "sponsors"
+  Rendered welcome/index.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 382ms (Views: 379.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-01 15:10:17 +0200
+Processing by WelcomeController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6[0m
+  [1m[35mGame Load (0.4ms)[0m  SELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mSponsor Load (0.2ms)[0m  [1mSELECT "sponsors".* FROM "sponsors"[0m
+  Rendered welcome/index.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 603ms (Views: 600.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2015-04-01 15:10:41 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered articles/show.html.erb within layouts/application (142.4ms)
+Completed 200 OK in 511ms (Views: 508.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2015-04-01 15:14:22 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered articles/show.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 1585ms (Views: 1582.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2015-04-01 15:14:37 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered articles/show.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 434ms (Views: 430.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2015-04-01 15:14:43 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered articles/show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 426ms (Views: 422.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2015-04-01 15:14:48 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered articles/show.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 485ms (Views: 481.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/8/edit" for 127.0.0.1 at 2015-04-01 15:15:18 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered articles/_form.html.erb (237.9ms)
+  Rendered articles/edit.html.erb within layouts/application (282.8ms)
+Completed 200 OK in 638ms (Views: 636.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/articles/8" for 127.0.0.1 at 2015-04-01 15:15:29 +0200
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WmQ5eVCwFwQHnU39+H6/xOjKs3WJJJKvQKecRRmr+PA=", "article"=>{"title"=>"Fotoreportage: Drogeham 1 - VCR 1  door Sylvia Riemersma", "text"=>"<p><strong>Rinsumageast - in het laatste duel van het jaar 2014 moest VCR aantreden tegen het Groningse Opende. Onder prachtige voetbalomstandigheden liet de thuisploeg zich afbluffen op sportpark \"De Vonder\", door een fysiek veel sterkere en ervaren tegenstander. Vanaf het beginsignaal was de gastploeg de bovenliggende partij maar had de hulp van de scheidsrechter nodig om dit veldoverwicht uit te drukken in een voorsprong. En deze klap kwam de thuisploeg niet meer te boven ondanks een tijdlang in de tweede helft met een man meer situatie. Scheidsrechter J. Struijs uit Leeuwarden was wel heel nadrukkelijk aanwezig en boekte maar liefst zes spelers van Opende, waarvan één speler met twee keer geel, en één speler van VCR met één keer geel. Pupil van de week was Jelmer Brouwer van de VCR E-pupillen.</strong></p><p>De runner-up van de vierde klasse B Opende, begon voortvarend aan deze wedstrijd en zette VCR, onder aanvoering van en aanjager Hendrik de Zwart, meteen onder druk. Opende had duidelijk wat goed te maken na de nederlaag een week eerder thuis tegen Drogeham en liet dat meteen blijken. In de beginfase had Opende een prima combinatie op haar rechterflank tussen Mark Koop en Wilmer Ypenga, waarbij laatstgenoemde mocht uithalen maar zijn pegel in het zijnet zag belandden. Vier min later in de 11e min was het opnieuw Wilmer Ypenga die met een vlijmscherpe steekpass dwars door de VCR defensie heen Henk Veenstra oog in oog met de VCR doelman Rene Zwaagstra zette. Maar in deze één tegen één situatie hield de VCR keeper zijn hoofd koel en kwam als winnaar uit de bus. VCR kwam maar moeilijk in haar spel en wist dit duel maar niet in haar voordeel te doen kantelen, ondanks al haar goede bedoelingen.</p><p>In de twintigste min was het Mark Koop met een perfecte voorzet vanaf de linkerflank. Deze werd op waarde ingeschat en prachtig binnengekopt door Jellinus Helmus, maar de VCR goalie stond op de juiste plaats en kon de bal oprapen. Pas halverwege deze eerste helft het eerste echte gevaar voor de thuisploeg. Een prachtige aanval werd op de mat gelegd. Het was middenvelder Anton Prins die Rienk de Haas wist aan te spelen. Deze vond vervolgens de vrijstaande VCR rechtsback Arno Riemersma. En na een prachtige één-twee combinatie met Erwin Raap, mocht deze vuren op het vijandelijke doel, maar vond het zijnet naast gastkeeper Eppie Pijpker.</p><p>Drie min later mocht Mark Koop uithalen vanaf een behoorlijke afstand maar de vingertoppen van thuisdoelwachter brachten redding. En ook de inzet van Henk Veenstra na een snelle inworp van Fokke Zuiderveld vond niet het beoogde doel en vloog naast. Zo bleef VCR de onderliggende partij en werd ook nog eens flink benadeeld door scheidsrechter Struijs toen deze wel heel gemakkelijk naar de stip wees na een onschuldige schouderduw van Josco van Andel op Hendrik de Zwart uit een pass van Wilmer Ypenga in het beruchte zestienmetergebied. Een kolfje naar de hand van good-old Silco Hiemstra en de \"welverdiende\" 0-1 was een feit.</p><p>En bijna in het rustsignaal was het nog eenmaal het team van trainer Wietse vd Veen die ten aanval trok. Henk Veenstra vond opnieuw Wilmer Ypenga maar voor de zoveelste keer wist thuiskeeper Zwaagstra redding te brengen. En zo gingen de beide teams rusten met een 0-1 stand.</p><p>Na de rust kreeg VCR iets meer grip op tegenstander Opende zonder dat dit echt tot mogelijkheden leidde en ook toen de formatie uit Groningen met tien man verder moest na twee keer geel en dus rood voor Henry vd Wal kwam het moeilijk tot echt uitgespeelde kansen. Het eerste gevaar in deze tweede helft was wederom voor de gasten. Een prima voorzet van Fokke Zuiderveld werd goed ingekopt door Hendrik de Zwart maar vloog net over de dwarsligger. Een kwartier voor tijd kreeg VCR de uitgelezen mogelijkheid op de gelijkmaker door invaller Jenilson Pires da Silva na een prima steekbal van Josco van Andel, maar ook in deze wedstrijd vond de parel van VCR niet de juiste weg en schoot naast.</p><p>En toen Mark Koop van Opende, zes minuten later de 0-2 wist te scoren na een prima vrije bal van Silco Hiemstra, was het over en uit voor de zwarthemden uit Rinsumageast. En zo verloor VCR deze laatste wedstrijd van het jaar 2014 wel op een hele lullige manier door o.a. een wel heel gemakkelijke tegen gegeven penalty. En mede hierdoor drukte de scheidsrechter wel een hele grote stempel op dit duel en dat is altijd jammer. Want juist de man in het \"geel\" moet een onopvallende rol opvoeren, want dan pas fluit hij een goede wedstrijd.</p>"}, "commit"=>"Update Article", "id"=>"8"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/articles/8
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2015-04-01 15:15:29 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered articles/show.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 351ms (Views: 347.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2015-04-01 15:15:56 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered articles/show.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 464ms (Views: 460.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/8/edit" for 127.0.0.1 at 2015-04-01 15:16:01 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered articles/_form.html.erb (4.0ms)
+  Rendered articles/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 367ms (Views: 365.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/articles/8" for 127.0.0.1 at 2015-04-01 15:16:14 +0200
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WmQ5eVCwFwQHnU39+H6/xOjKs3WJJJKvQKecRRmr+PA=", "article"=>{"title"=>"Fotoreportage: Drogeham 1 - VCR 1  door Sylvia Riemersma", "text"=>"<p><strong>Rinsumageast - in het laatste duel van het jaar 2014 moest VCR aantreden tegen het Groningse Opende. Onder prachtige voetbalomstandigheden liet de thuisploeg zich afbluffen op sportpark \"De Vonder\", door een fysiek veel sterkere en ervaren tegenstander. Vanaf het beginsignaal was de gastploeg de bovenliggende partij maar had de hulp van de scheidsrechter nodig om dit veldoverwicht uit te drukken in een voorsprong. En deze klap kwam de thuisploeg niet meer te boven ondanks een tijdlang in de tweede helft met een man meer situatie. Scheidsrechter J. Struijs uit Leeuwarden was wel heel nadrukkelijk aanwezig en boekte maar liefst zes spelers van Opende, waarvan één speler met twee keer geel, en één speler van VCR met één keer geel. Pupil van de week was Jelmer Brouwer van de VCR E-pupillen.</strong></p><p>De runner-up van de vierde klasse B Opende, begon voortvarend aan deze wedstrijd en zette VCR, onder aanvoering van en aanjager Hendrik de Zwart, meteen onder druk. Opende had duidelijk wat goed te maken na de nederlaag een week eerder thuis tegen Drogeham en liet dat meteen blijken. In de beginfase had Opende een prima combinatie op haar rechterflank tussen Mark Koop en Wilmer Ypenga, waarbij laatstgenoemde mocht uithalen maar zijn pegel in het zijnet zag belandden. Vier min later in de 11e min was het opnieuw Wilmer Ypenga die met een vlijmscherpe steekpass dwars door de VCR defensie heen Henk Veenstra oog in oog met de VCR doelman Rene Zwaagstra zette. Maar in deze één tegen één situatie hield de VCR keeper zijn hoofd koel en kwam als winnaar uit de bus. VCR kwam maar moeilijk in haar spel en wist dit duel maar niet in haar voordeel te doen kantelen, ondanks al haar goede bedoelingen.</p><p>In de twintigste min was het Mark Koop met een perfecte voorzet vanaf de linkerflank. Deze werd op waarde ingeschat en prachtig binnengekopt door Jellinus Helmus, maar de VCR goalie stond op de juiste plaats en kon de bal oprapen. Pas halverwege deze eerste helft het eerste echte gevaar voor de thuisploeg. Een prachtige aanval werd op de mat gelegd. Het was middenvelder Anton Prins die Rienk de Haas wist aan te spelen. Deze vond vervolgens de vrijstaande VCR rechtsback Arno Riemersma. En na een prachtige één-twee combinatie met Erwin Raap, mocht deze vuren op het vijandelijke doel, maar vond het zijnet naast gastkeeper Eppie Pijpker.</p><p>Drie min later mocht Mark Koop uithalen vanaf een behoorlijke afstand maar de vingertoppen van thuisdoelwachter brachten redding. En ook de inzet van Henk Veenstra na een snelle inworp van Fokke Zuiderveld vond niet het beoogde doel en vloog naast. Zo bleef VCR de onderliggende partij en werd ook nog eens flink benadeeld door scheidsrechter Struijs toen deze wel heel gemakkelijk naar de stip wees na een onschuldige schouderduw van Josco van Andel op Hendrik de Zwart uit een pass van Wilmer Ypenga in het beruchte zestienmetergebied. Een kolfje naar de hand van good-old Silco Hiemstra en de \"welverdiende\" 0-1 was een feit.</p><p>En bijna in het rustsignaal was het nog eenmaal het team van trainer Wietse vd Veen die ten aanval trok. Henk Veenstra vond opnieuw Wilmer Ypenga maar voor de zoveelste keer wist thuiskeeper Zwaagstra redding te brengen. En zo gingen de beide teams rusten met een 0-1 stand.</p><p>Na de rust kreeg VCR iets meer grip op tegenstander Opende zonder dat dit echt tot mogelijkheden leidde en ook toen de formatie uit Groningen met tien man verder moest na twee keer geel en dus rood voor Henry vd Wal kwam het moeilijk tot echt uitgespeelde kansen. Het eerste gevaar in deze tweede helft was wederom voor de gasten. Een prima voorzet van Fokke Zuiderveld werd goed ingekopt door Hendrik de Zwart maar vloog net over de dwarsligger. Een kwartier voor tijd kreeg VCR de uitgelezen mogelijkheid op de gelijkmaker door invaller Jenilson Pires da Silva na een prima steekbal van Josco van Andel, maar ook in deze wedstrijd vond de parel van VCR niet de juiste weg en schoot naast.</p><p>En toen Mark Koop van Opende, zes minuten later de 0-2 wist te scoren na een prima vrije bal van Silco Hiemstra, was het over en uit voor de zwarthemden uit Rinsumageast. En zo verloor VCR deze laatste wedstrijd van het jaar 2014 wel op een hele lullige manier door o.a. een wel heel gemakkelijke tegen gegeven penalty. En mede hierdoor drukte de scheidsrechter wel een hele grote stempel op dit duel en dat is altijd jammer. Want juist de man in het \"geel\" moet een onopvallende rol opvoeren, want dan pas fluit hij een goede wedstrijd.</p>"}, "commit"=>"Update Article", "id"=>"8"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/articles/8
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2015-04-01 15:16:14 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mGame Load (1.0ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered articles/show.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 402ms (Views: 398.6ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/articles/8" for 127.0.0.1 at 2015-04-01 15:16:27 +0200
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WmQ5eVCwFwQHnU39+H6/xOjKs3WJJJKvQKecRRmr+PA=", "article"=>{"title"=>"Fotoreportage: Drogeham 1 - VCR 1  door Sylvia Riemersma", "text"=>"Rinsumageast - in het laatste duel van het jaar 2014 moest VCR aantreden tegen het Groningse Opende. Onder prachtige voetbalomstandigheden liet de thuisploeg zich afbluffen op sportpark \"De Vonder\", door een fysiek veel sterkere en ervaren tegenstander. Vanaf het beginsignaal was de gastploeg de bovenliggende partij maar had de hulp van de scheidsrechter nodig om dit veldoverwicht uit te drukken in een voorsprong. En deze klap kwam de thuisploeg niet meer te boven ondanks een tijdlang in de tweede helft met een man meer situatie. Scheidsrechter J. Struijs uit Leeuwarden was wel heel nadrukkelijk aanwezig en boekte maar liefst zes spelers van Opende, waarvan één speler met twee keer geel, en één speler van VCR met één keer geel. Pupil van de week was Jelmer Brouwer van de VCR E-pupillen.\r\n\r\nDe runner-up van de vierde klasse B Opende, begon voortvarend aan deze wedstrijd en zette VCR, onder aanvoering van en aanjager Hendrik de Zwart, meteen onder druk. Opende had duidelijk wat goed te maken na de nederlaag een week eerder thuis tegen Drogeham en liet dat meteen blijken. In de beginfase had Opende een prima combinatie op haar rechterflank tussen Mark Koop en Wilmer Ypenga, waarbij laatstgenoemde mocht uithalen maar zijn pegel in het zijnet zag belandden. Vier min later in de 11e min was het opnieuw Wilmer Ypenga die met een vlijmscherpe steekpass dwars door de VCR defensie heen Henk Veenstra oog in oog met de VCR doelman Rene Zwaagstra zette. Maar in deze één tegen één situatie hield de VCR keeper zijn hoofd koel en kwam als winnaar uit de bus. VCR kwam maar moeilijk in haar spel en wist dit duel maar niet in haar voordeel te doen kantelen, ondanks al haar goede bedoelingen.\r\n\r\nIn de twintigste min was het Mark Koop met een perfecte voorzet vanaf de linkerflank. Deze werd op waarde ingeschat en prachtig binnengekopt door Jellinus Helmus, maar de VCR goalie stond op de juiste plaats en kon de bal oprapen. Pas halverwege deze eerste helft het eerste echte gevaar voor de thuisploeg. Een prachtige aanval werd op de mat gelegd. Het was middenvelder Anton Prins die Rienk de Haas wist aan te spelen. Deze vond vervolgens de vrijstaande VCR rechtsback Arno Riemersma. En na een prachtige één-twee combinatie met Erwin Raap, mocht deze vuren op het vijandelijke doel, maar vond het zijnet naast gastkeeper Eppie Pijpker.\r\n\r\nDrie min later mocht Mark Koop uithalen vanaf een behoorlijke afstand maar de vingertoppen van thuisdoelwachter brachten redding. En ook de inzet van Henk Veenstra na een snelle inworp van Fokke Zuiderveld vond niet het beoogde doel en vloog naast. Zo bleef VCR de onderliggende partij en werd ook nog eens flink benadeeld door scheidsrechter Struijs toen deze wel heel gemakkelijk naar de stip wees na een onschuldige schouderduw van Josco van Andel op Hendrik de Zwart uit een pass van Wilmer Ypenga in het beruchte zestienmetergebied. Een kolfje naar de hand van good-old Silco Hiemstra en de \"welverdiende\" 0-1 was een feit.\r\n\r\nEn bijna in het rustsignaal was het nog eenmaal het team van trainer Wietse vd Veen die ten aanval trok. Henk Veenstra vond opnieuw Wilmer Ypenga maar voor de zoveelste keer wist thuiskeeper Zwaagstra redding te brengen. En zo gingen de beide teams rusten met een 0-1 stand.\r\n\r\nNa de rust kreeg VCR iets meer grip op tegenstander Opende zonder dat dit echt tot mogelijkheden leidde en ook toen de formatie uit Groningen met tien man verder moest na twee keer geel en dus rood voor Henry vd Wal kwam het moeilijk tot echt uitgespeelde kansen. Het eerste gevaar in deze tweede helft was wederom voor de gasten. Een prima voorzet van Fokke Zuiderveld werd goed ingekopt door Hendrik de Zwart maar vloog net over de dwarsligger. Een kwartier voor tijd kreeg VCR de uitgelezen mogelijkheid op de gelijkmaker door invaller Jenilson Pires da Silva na een prima steekbal van Josco van Andel, maar ook in deze wedstrijd vond de parel van VCR niet de juiste weg en schoot naast.\r\n\r\nEn toen Mark Koop van Opende, zes minuten later de 0-2 wist te scoren na een prima vrije bal van Silco Hiemstra, was het over en uit voor de zwarthemden uit Rinsumageast. En zo verloor VCR deze laatste wedstrijd van het jaar 2014 wel op een hele lullige manier door o.a. een wel heel gemakkelijke tegen gegeven penalty. En mede hierdoor drukte de scheidsrechter wel een hele grote stempel op dit duel en dat is altijd jammer. Want juist de man in het \"geel\" moet een onopvallende rol opvoeren, want dan pas fluit hij een goede wedstrijd."}, "commit"=>"Update Article", "id"=>"8"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (40.9ms)[0m  UPDATE "articles" SET "text" = ?, "updated_at" = ? WHERE "articles"."id" = 8  [["text", "Rinsumageast - in het laatste duel van het jaar 2014 moest VCR aantreden tegen het Groningse Opende. Onder prachtige voetbalomstandigheden liet de thuisploeg zich afbluffen op sportpark \"De Vonder\", door een fysiek veel sterkere en ervaren tegenstander. Vanaf het beginsignaal was de gastploeg de bovenliggende partij maar had de hulp van de scheidsrechter nodig om dit veldoverwicht uit te drukken in een voorsprong. En deze klap kwam de thuisploeg niet meer te boven ondanks een tijdlang in de tweede helft met een man meer situatie. Scheidsrechter J. Struijs uit Leeuwarden was wel heel nadrukkelijk aanwezig en boekte maar liefst zes spelers van Opende, waarvan één speler met twee keer geel, en één speler van VCR met één keer geel. Pupil van de week was Jelmer Brouwer van de VCR E-pupillen.\r\n\r\nDe runner-up van de vierde klasse B Opende, begon voortvarend aan deze wedstrijd en zette VCR, onder aanvoering van en aanjager Hendrik de Zwart, meteen onder druk. Opende had duidelijk wat goed te maken na de nederlaag een week eerder thuis tegen Drogeham en liet dat meteen blijken. In de beginfase had Opende een prima combinatie op haar rechterflank tussen Mark Koop en Wilmer Ypenga, waarbij laatstgenoemde mocht uithalen maar zijn pegel in het zijnet zag belandden. Vier min later in de 11e min was het opnieuw Wilmer Ypenga die met een vlijmscherpe steekpass dwars door de VCR defensie heen Henk Veenstra oog in oog met de VCR doelman Rene Zwaagstra zette. Maar in deze één tegen één situatie hield de VCR keeper zijn hoofd koel en kwam als winnaar uit de bus. VCR kwam maar moeilijk in haar spel en wist dit duel maar niet in haar voordeel te doen kantelen, ondanks al haar goede bedoelingen.\r\n\r\nIn de twintigste min was het Mark Koop met een perfecte voorzet vanaf de linkerflank. Deze werd op waarde ingeschat en prachtig binnengekopt door Jellinus Helmus, maar de VCR goalie stond op de juiste plaats en kon de bal oprapen. Pas halverwege deze eerste helft het eerste echte gevaar voor de thuisploeg. Een prachtige aanval werd op de mat gelegd. Het was middenvelder Anton Prins die Rienk de Haas wist aan te spelen. Deze vond vervolgens de vrijstaande VCR rechtsback Arno Riemersma. En na een prachtige één-twee combinatie met Erwin Raap, mocht deze vuren op het vijandelijke doel, maar vond het zijnet naast gastkeeper Eppie Pijpker.\r\n\r\nDrie min later mocht Mark Koop uithalen vanaf een behoorlijke afstand maar de vingertoppen van thuisdoelwachter brachten redding. En ook de inzet van Henk Veenstra na een snelle inworp van Fokke Zuiderveld vond niet het beoogde doel en vloog naast. Zo bleef VCR de onderliggende partij en werd ook nog eens flink benadeeld door scheidsrechter Struijs toen deze wel heel gemakkelijk naar de stip wees na een onschuldige schouderduw van Josco van Andel op Hendrik de Zwart uit een pass van Wilmer Ypenga in het beruchte zestienmetergebied. Een kolfje naar de hand van good-old Silco Hiemstra en de \"welverdiende\" 0-1 was een feit.\r\n\r\nEn bijna in het rustsignaal was het nog eenmaal het team van trainer Wietse vd Veen die ten aanval trok. Henk Veenstra vond opnieuw Wilmer Ypenga maar voor de zoveelste keer wist thuiskeeper Zwaagstra redding te brengen. En zo gingen de beide teams rusten met een 0-1 stand.\r\n\r\nNa de rust kreeg VCR iets meer grip op tegenstander Opende zonder dat dit echt tot mogelijkheden leidde en ook toen de formatie uit Groningen met tien man verder moest na twee keer geel en dus rood voor Henry vd Wal kwam het moeilijk tot echt uitgespeelde kansen. Het eerste gevaar in deze tweede helft was wederom voor de gasten. Een prima voorzet van Fokke Zuiderveld werd goed ingekopt door Hendrik de Zwart maar vloog net over de dwarsligger. Een kwartier voor tijd kreeg VCR de uitgelezen mogelijkheid op de gelijkmaker door invaller Jenilson Pires da Silva na een prima steekbal van Josco van Andel, maar ook in deze wedstrijd vond de parel van VCR niet de juiste weg en schoot naast.\r\n\r\nEn toen Mark Koop van Opende, zes minuten later de 0-2 wist te scoren na een prima vrije bal van Silco Hiemstra, was het over en uit voor de zwarthemden uit Rinsumageast. En zo verloor VCR deze laatste wedstrijd van het jaar 2014 wel op een hele lullige manier door o.a. een wel heel gemakkelijke tegen gegeven penalty. En mede hierdoor drukte de scheidsrechter wel een hele grote stempel op dit duel en dat is altijd jammer. Want juist de man in het \"geel\" moet een onopvallende rol opvoeren, want dan pas fluit hij een goede wedstrijd."], ["updated_at", "2015-04-01 13:16:27.180430"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/articles/8
+Completed 302 Found in 49ms (ActiveRecord: 42.5ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2015-04-01 15:16:27 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered articles/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 338ms (Views: 335.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-01 15:16:55 +0200
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  "articles".* FROM "articles"   ORDER BY created_at DESC LIMIT 6
+  [1m[36mGame Load (0.5ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE (date >= '2015-04-01')  ORDER BY date ASC LIMIT 3[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT "sponsors".* FROM "sponsors"
+  Rendered welcome/index.html.erb within layouts/application (51.9ms)
+Completed 200 OK in 449ms (Views: 445.9ms | ActiveRecord: 1.9ms)

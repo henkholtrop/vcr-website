@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 gem 'quiet_assets'
 gem "paperclip", "~> 4.2"
 gem 'font-awesome-rails', '~> 4.2.0.0'
-gem "wysiwyg-rails"
 
 gem 'rails', '4.1.8'
 gem 'sqlite3'
