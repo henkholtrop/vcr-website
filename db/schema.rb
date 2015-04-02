@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150402092505) do
+ActiveRecord::Schema.define(version: 20150402130258) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -37,6 +37,20 @@ ActiveRecord::Schema.define(version: 20150402092505) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "members", force: true do |t|
+    t.string   "name"
+    t.string   "occupation"
+    t.integer  "phone"
+    t.string   "email"
+    t.date     "birth_date"
+    t.integer  "vcr_team_id"
+    t.integer  "team"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "members", ["vcr_team_id"], name: "index_members_on_vcr_team_id"
 
   create_table "posts", force: true do |t|
     t.string   "title"

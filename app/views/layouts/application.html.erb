@@ -15,34 +15,42 @@
     <%= link_to image_tag("vcr-logo.png", :alt => "vcr logo", :class => "vcr-logo"), root_path %>
     <nav>
       <li class="active-menu"><a href="#">Home</a></li>
-      <li><a href="#" id="de-club">De Club<i class="fa fa-angle-down fa-fw"></i></a>
+      <li id="de-club"><a href="#">De Club<i class="fa fa-angle-down fa-fw"></i></a>
         <div class="club-dropdown-wrapper">
             <div class="club-dropdown">
               <ul class="dropdown-list">
                 Senioren
-                <li>VCR 1</li>
-                <li>VCR 2</li>
-                <li>VCR 3</li>
-                <li>VCR Dames 1</li>
-              </ul>
-              <ul class="dropdown-list">
-                Junioren
-                <li>VCR B1</li>
-                <li>VCR C1</li>
-                <li>VCR MC1</li>
-              </ul>
-              <ul class="dropdown-list">
-                Pupillen
-                <li>VCR D1</li>
-                <li>VCR E1</li>
-                <li>VCR F1</li>
-                <li>VCR F2</li>
-                <li>VCR F3</li>
+                <% @senioren.each do |vcr_team| %>
+                  <li><%= link_to vcr_team.title, vcr_team_path(vcr_team) %></li>
+                <% end %>
               </ul>
             </div>
           </div>
       </li>
-      <li><a href="#">Teams<i class="fa fa-angle-down fa-fw"></i></a></li>
+      <li id="teams"><a href="#">Teams<i class="fa fa-angle-down fa-fw"></i></a>
+        <div class="teams-dropdown-wrapper">
+            <div class="teams-dropdown">
+              <ul class="dropdown-list">
+                Senioren
+                <% @senioren.each do |vcr_team| %>
+                  <li><%= link_to vcr_team.title, vcr_team_path(vcr_team) %></li>
+                <% end %>
+              </ul>
+              <ul class="dropdown-list">
+                Junioren
+                <% @junioren.each do |vcr_team| %>
+                  <li><%= link_to vcr_team.title, vcr_team_path(vcr_team) %></li>
+                <% end %>
+              </ul>
+              <ul class="dropdown-list">
+                Pupillen
+                <% @pupillen.each do |vcr_team| %>
+                  <li><%= link_to vcr_team.title, vcr_team_path(vcr_team) %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+      </li>
       <li><a href="#">Nieuwsarchief</a></li>
     </nav>
   </div>

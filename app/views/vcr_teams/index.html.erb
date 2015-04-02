@@ -1,23 +1,82 @@
 <section class="content-wrapper">
-  <div class="article-wrapper">.</div>
+  <div class="cms-clear">.</div>
+  <aside class="cms-navigation">
+  <div class="nav-title">VCR CMS</div>
+    <nav class="cms-nav">
+      <li><%= link_to 'Nieuwsberichten', articles_path %></li>
+      <li><%= link_to 'VCR 1 Wedstrijden', games_path %></li>
+      <li><%= link_to 'VCR Teams', vcr_teams_path %></li>
+      <li><%= link_to 'Leden', members_path %></li>
+      <li><%= link_to 'Sponsoren', sponsors_path %></li>
+    </nav>
+  </aside>
   <div class="article-wrapper">
     <h1 class="box-title">VCR Teams</h1>
     <button class="button-green"><%= link_to 'Nieuw team toevoegen', new_vcr_team_path %></button>
 
-  <table id="games_table">
-    <% @vcr_teams.each do |vcr_team| %>
-      <tr>
-        <td><button class="button-blue"><%= link_to edit_vcr_team_path(vcr_team) do %>
-          <i class="fa fa-edit"></i>
-        <% end %>
-        </button></td>
-        <td><button class="button-red"><%= link_to vcr_team_path(vcr_team),
-                           method: :delete, data: { confirm: 'Are you sure?' } do %>
+  <table class="cms-table">
+    <tr style="height:65px;background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 79%, #efefef 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(79%,#ffffff), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 79%,#efefef 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
+">
+        <td><strong>Team</strong></td>
+        <td><strong>Leeftijds groep</strong></td>
+        <td style="text-align:right;"> </td>
+    </tr>
+    <% @senioren.each do |vcr_team| %>
+      <tr class="border_top">
+        <td><strong><%= link_to vcr_team.title, vcr_team_path(vcr_team) %></strong></td>
+        <td><%= vcr_team.age_group %></td>
+        <td ><button class="button-red right"><%= link_to vcr_team_path(vcr_team),
+                           method: :delete, data: { confirm: 'Weet je zeker dat je dit team wil verwijderen?' } do %>
           <i class="fa fa-trash"></i>
         <% end %>
-        </button></td>
-        <td><strong><%= vcr_team.title %></strong></td>
+        </button>
+        <button class="button-blue right"><%= link_to edit_vcr_team_path(vcr_team) do %>
+          <i class="fa fa-edit"></i>
+        <% end %>
+        </button>
+
+        </td>
+      </tr>
+    <% end %>
+    <% @junioren.each do |vcr_team| %>
+      <tr class="border_top">
+        <td><strong><%= link_to vcr_team.title, vcr_team_path(vcr_team) %></strong></td>
         <td><%= vcr_team.age_group %></td>
+        <td ><button class="button-red right"><%= link_to vcr_team_path(vcr_team),
+                           method: :delete, data: { confirm: 'Weet je zeker dat je dit team wil verwijderen?' } do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
+        </button>
+        <button class="button-blue right"><%= link_to edit_vcr_team_path(vcr_team) do %>
+          <i class="fa fa-edit"></i>
+        <% end %>
+        </button>
+
+        </td>
+      </tr>
+    <% end %>
+    <% @pupillen.each do |vcr_team| %>
+      <tr class="border_top">
+        <td><strong><%= link_to vcr_team.title, vcr_team_path(vcr_team) %></strong></td>
+        <td><%= vcr_team.age_group %></td>
+        <td ><button class="button-red right"><%= link_to vcr_team_path(vcr_team),
+                           method: :delete, data: { confirm: 'Weet je zeker dat je dit team wil verwijderen?' } do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
+        </button>
+        <button class="button-blue right"><%= link_to edit_vcr_team_path(vcr_team) do %>
+          <i class="fa fa-edit"></i>
+        <% end %>
+        </button>
+
+        </td>
       </tr>
     <% end %>
   </table>

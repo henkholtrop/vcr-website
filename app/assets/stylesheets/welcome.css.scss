@@ -5,77 +5,6 @@
 @import 'typography';
 @import 'grid';
 
-header {
-  background-color: rgba(0, 0, 0, 0.9);
-  height: 90px;
-  width: 100%;
-  z-index: 999;
-  padding: 0;
-  position: fixed;
-  nav {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      a {
-        list-style: none;
-        float: left;
-        color: #FFF;
-        font-family: $font-stack;
-        font-weight: 700;
-        font-size: 18px;
-        padding: 13px 20px; 
-        margin: 20px 0 20px 0px;
-        border-radius: 4px;
-        text-decoration: none;
-      }
-      &:hover {
-        background-color: #F85824;
-      }
-      &:hover  .club-dropdown-wrapper {
-          display: inline-block;
-      }
-    }
-  }
-}
-
-.club-dropdown-wrapper {
- position: fixed;
- margin-top: 11px;
- background-color: rgba(0, 0, 0, 0.7);
- display: none;
- width: 100%;
- padding: 50px 0;
- top: 79px;
- z-index: 999;
- left: 0;
-}
-
-.club-dropdown {
-  width: $website-width;
-  margin: auto;
-}
-
-.dropdown-list {
-  float: left;
-  width: $col-4;
-  box-sizing: border-box;
-  list-style: none;
-  font-family: $font-stack;
-  font-weight: 600;
-  font-size: 18px;
-  color: #DD5F2A;
-  li {
-    color: #FFFFFF;
-    font-weight: 400;
-    padding: 0;
-    margin: 0; 
-    float: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
 
 #content {
   margin-top: -130px;
@@ -84,12 +13,6 @@ header {
 
 .active-menu {
   background-color: #F85824;
-}
-
-.vcr-logo {
-  width: 363px;
-  height: 61px;
-  margin-top: 14px;
 }
 
 .slides-container {

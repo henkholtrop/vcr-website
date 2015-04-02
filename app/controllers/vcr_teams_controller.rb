@@ -2,6 +2,9 @@ class VcrTeamsController < ApplicationController
 
   def index
     @vcr_teams = VcrTeam.all.order('title ASC')
+    @senioren = VcrTeam.where("age_group = 'Senioren'").order('title ASC')
+    @junioren = VcrTeam.where("age_group = 'Junioren'").order('title ASC')
+    @pupillen = VcrTeam.where("age_group = 'Pupillen'").order('title ASC')
   end
 
   def new
@@ -14,6 +17,9 @@ class VcrTeamsController < ApplicationController
 
   def show
     @vcr_team = VcrTeam.find(params[:id])
+    @players = Member.where('team == ?', @vcr_team.id)
+    @sponsors = Sponsor.all
+    @games = Game.where('date >= ?', Date.today).order('date ASC').limit(3)
   end
 
   def create

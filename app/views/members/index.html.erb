@@ -1,0 +1,56 @@
+<section class="content-wrapper">
+  <div class="cms-clear">.</div>
+  <aside class="cms-navigation">
+  <div class="nav-title">VCR CMS</div>
+    <nav class="cms-nav">
+      <li><%= link_to 'Nieuwsberichten', articles_path %></li>
+      <li><%= link_to 'VCR 1 Wedstrijden', games_path %></li>
+      <li><%= link_to 'VCR Teams', vcr_teams_path %></li>
+      <li><%= link_to 'Leden', members_path %></li>
+      <li><%= link_to 'Sponsoren', sponsors_path %></li>
+    </nav>
+  </aside>
+  <div class="article-wrapper">
+  <h1 class="box-title">VCR Leden</h1>
+  <button class="button-green"><%= link_to 'Nieuw lid toevoegen', new_member_path %></button>
+    <table class="cms-table">
+    <tr style="height:65px;background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 79%, #efefef 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(79%,#ffffff), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 79%,#efefef 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
+">
+        <td><strong>Naam</strong></td>
+        <td><strong>Functie</strong></td>
+        <td><strong>Team</strong></td>
+        <td><strong>Tel.nr.</strong></td>
+        <td><strong>E-mail</strong></td>
+        <td><strong>Geb. datum</strong></td>
+        <td style="text-align:right;"> </td>
+    </tr>
+    <% @members.each do |member| %>
+      <tr class="border_top">
+        <td><%= member.name %></td>
+        <td><%= member.occupation %></td>
+        <td><%= VcrTeam.find(member.team).title %></td>
+        <td><%= member.phone %></td>
+        <td><%= member.email %></td>
+        <td><%= member.birth_date %></td>
+        <td>
+        <button class="button-red right"><%= link_to member_path(member),
+                           method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
+        </button>
+        <button class="button-blue right"><%= link_to edit_member_path(member) do %>
+          <i class="fa fa-edit"></i>
+        <% end %>
+        </button></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+</section>

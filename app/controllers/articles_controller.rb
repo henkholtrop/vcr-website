@@ -1,4 +1,9 @@
 class ArticlesController < ApplicationController
+
+  @senioren = VcrTeam.where("age_group = 'Senioren'").order('title ASC')
+  @junioren = VcrTeam.where("age_group = 'Junioren'").order('title ASC')
+  @pupillen = VcrTeam.where("age_group = 'Pupillen'").order('title ASC')
+
   def new
     @article = Article.new
   end
