@@ -1,0 +1,26 @@
+<%= form_for @vcr_team do |f| %>
+  <% if @vcr_team.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@vcr_team.errors.count, "error") %> prohibited
+      this team from being saved:</h2>
+    <ul>
+    <% @vcr_team.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :age_group %><br>
+    <%= f.text_field :age_group %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

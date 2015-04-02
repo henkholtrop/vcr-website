@@ -17,9 +17,6 @@
  *= require owl.carousel
  *= require owl.theme
  *= require font-awesome
- *= require froala_editor.min.css
- *= require froala_style.min.css
- *= require font-awesome
  */
 
 html {

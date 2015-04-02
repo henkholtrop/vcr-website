@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :teams
   resources :games
   resources :sponsors
+  resources :vcr_teams
  
   root 'welcome#index'
 end
