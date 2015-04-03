@@ -18,7 +18,7 @@
   <div class="content-wrapper">
     <%= link_to image_tag("vcr-logo.png", :alt => "vcr logo", :class => "vcr-logo"), root_path %>
     <nav>
-      <li class="active-menu"><a href="#">Home</a></li>
+      <li class="<%= 'active-menu' if current_page?(root_path) %>"><%= link_to "Home", root_path %></li>
       <li id="de-club"><a href="#">De Club<i class="fa fa-angle-down fa-fw"></i></a>
         <div class="club-dropdown-wrapper">
             <div class="club-dropdown">
@@ -31,7 +31,7 @@
             </div>
           </div>
       </li>
-      <li id="teams"><a href="#">Teams<i class="fa fa-angle-down fa-fw"></i></a>
+      <li id="teams" class="<%= 'active-menu' if current_page?(vcr_teams_path) %>"><a href="<% vcr_teams_path %>">Teams<i class="fa fa-angle-down fa-fw"></i></a>
         <div class="teams-dropdown-wrapper">
             <div class="teams-dropdown">
               <ul class="dropdown-list">
@@ -55,7 +55,7 @@
             </div>
           </div>
       </li>
-      <li><a href="#">Nieuwsarchief</a></li>
+      <li class="<%= 'active-menu' if current_page?(articles_path) %>"><%= link_to "Nieuwsarchief", articles_path %></li>
     </nav>
   </div>
 </header>

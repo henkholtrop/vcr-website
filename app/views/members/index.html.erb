@@ -34,7 +34,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         <td><%= link_to member.name, member_path(member) %></td>
         <td><%= member.occupation %></td>
         <td><%= VcrTeam.find(member.team).title %></td>
-        <td><%= member.birth_date %></td>
+        <td><%= member.birth_date.strftime("%-d - %m - %Y") %></td>
         <td>
         <button class="button-red right"><%= link_to member_path(member),
                            method: :delete, data: { confirm: 'Are you sure?' } do %>

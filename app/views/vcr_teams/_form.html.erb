@@ -17,7 +17,17 @@
 
   <p>
     <%= f.label :age_group %><br>
-    <%= f.text_field :age_group %>
+    <%= f.select :age_group, [['Senioren'], ['Junioren'], ['Pupillen']] %>
+  </p>
+
+  <p>
+    <%= f.label :cover_image %><br>
+    <%= f.file_field :cover_image %>
+  </p>
+
+  <p>
+    <%= f.label :team_image %><br>
+    <%= f.file_field :team_image %>
   </p>
 
   <p>

@@ -1,0 +1,27 @@
+<div class="box-title">Selectie <%= @vcr_team.title %></div>
+      <button class="button-green"><%= link_to 'Selectie lid toevoegen', new_member_path %></button>
+      <button class="button-blue"><%= link_to 'Bewerk team', edit_vcr_team_path(@vcr_team) %></button>
+      <button class="button-red"><%= link_to 'Verwijder team', vcr_team_path(@vcr_team),
+                                     method: :delete, data: { confirm: 'Are you sure?' } %></button> <div class="clear"></div>
+  <%= image_tag @vcr_team.team_image, :class => 'team-image' %>
+<div class="article-text">
+  <h3 class="subtitle">Spelers</h3>
+
+    <div class="clear"></div>
+    <% @players.each do |member| %>
+      <div class="member-wrapper">
+        <div class="member-photo"></div>
+        <div class="member-info">
+          <div class="member-name">
+            <%= member.name %>
+            <div class="member-sub"><%= member.birth_date.strftime("%-d - %m - %Y") %></div>
+          </div>
+          <div class="member-details">
+            T 0<%= member.phone %><br>
+            E <%= member.email %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+</div>

@@ -16,6 +16,4 @@
 //= require_tree .
 //= require jquery.superslides
 //= require jquery.superslides.min
-//= require smooth.scroll
 //= require owl.carousel.min
-

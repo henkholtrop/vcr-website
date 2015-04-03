@@ -46,7 +46,7 @@
 
         <h3 class="cms-h3">Geboorte datum</h3>
         <p>
-          <%= @member.birth_date %>
+          <%= @member.birth_date.strftime("%-d - %m - %Y") %>
         </p><br>
     </div>
   <br class="clear" />

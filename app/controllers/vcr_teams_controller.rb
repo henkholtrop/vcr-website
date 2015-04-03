@@ -17,13 +17,14 @@ class VcrTeamsController < ApplicationController
 
   def show
     @vcr_team = VcrTeam.find(params[:id])
-    @players = Member.where('team == ?', @vcr_team.id)
+    @players = Member.where('team == ?', @vcr_team.id).where('occupation == ?', 'Speler')
     @sponsors = Sponsor.all
     @games = Game.where('date >= ?', Date.today).order('date ASC').limit(3)
   end
 
   def create
     @vcr_team = VcrTeam.new(vcr_team_params)
+    @age_group = "Senioren", "Junioren", "Pupillen"
  
     if @vcr_team.save
       redirect_to vcr_teams_path
@@ -51,7 +52,6 @@ class VcrTeamsController < ApplicationController
 
 private
   def vcr_team_params
-    params.require(:vcr_team).permit(:title, :age_group)
+    params.require(:vcr_team).permit(:title, :age_group, :cover_image, :team_image)
   end
-
 end

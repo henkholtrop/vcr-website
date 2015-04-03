@@ -1,83 +1,53 @@
 <div class="article-cover-image">
-
+  <%= image_tag @vcr_team.cover_image %>
 </div>
 <div class="cover-image-clear">
   <div class="show-container">
     <div class="article-show-title">
       <h2><%= @vcr_team.title %></h2>
+      <button class="button-green"><%= link_to 'Team bewerken', edit_vcr_team_path(@vcr_team) %></button>
     </div>
   </div>  
 </div>
 
 <section class="content-wrapper">
-  <div class="article-wrapper">
+    <div class="tabs">
+        <ul class="tab-links">
+            <li class="active-tab"><a href="#tab1" class="nav-tab">Selectie</a></li>
+            <li><a href="#tab2" class="nav-tab">Wedstrijdschema</a></li>
+            <li><a href="#tab3" class="nav-tab">Informatie</a></li>
+        </ul>
 
-              <button class="button-blue"><%= link_to 'Bewerk team', edit_vcr_team_path(@vcr_team) %></button>
-              <button class="button-red"><%= link_to 'Verwijder team', vcr_team_path(@vcr_team),
-                                             method: :delete, data: { confirm: 'Are you sure?' } %></button> <div class="clear"></div>
-        <div class="article-text">
-          <table class="cms-table">
-    <tr style="height:65px;background: #ffffff; /* Old browsers */
-background: -moz-linear-gradient(top,  #ffffff 79%, #efefef 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(79%,#ffffff), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #ffffff 79%,#efefef 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
-">
-        <td><strong>Naam</strong></td>
-        <td><strong>Functie</strong></td>
-        <td><strong>Tel.nr.</strong></td>
-        <td><strong>E-mail</strong></td>
-        <td><strong>Geb. datum</strong></td>
-        <td style="text-align:right;"> </td>
-    </tr>
-    <% @players.each do |member| %>
-      <tr class="border_top">
-        <td><%= member.name %></td>
-        <td><%= member.occupation %></td>
-        <td><%= member.phone %></td>
-        <td><%= member.email %></td>
-        <td><%= member.birth_date %></td>
-        <td>
-        <button class="button-red right"><%= link_to member_path(member),
-                           method: :delete, data: { confirm: 'Are you sure?' } do %>
-          <i class="fa fa-trash"></i>
-        <% end %>
-        </button>
-        <button class="button-blue right"><%= link_to edit_member_path(member) do %>
-          <i class="fa fa-edit"></i>
-        <% end %>
-        </button></td>
-      </tr>
-    <% end %>
-  </table>
+      <div class="tab-content">
+        <div class="article-content">
+          <div id="tab1" class="tab active-tab">
+            <%= render 'selection' %>
+          </div>
+          <div id="tab2" class="tab">
+            <%= render 'schedule' %>
+          </div>
+          <div id="tab3" class="tab">
+            <%= render 'information' %>
+          </div>
         </div>
+      </div>
     </div>
-  <aside class="program-sidebar">
-    <h1 class="box-title">Programma VCR1</h1>
-    <div class="games-wrapper">
-      <% @games.each do |game| %>
-        <div class="game">
-          <div class="game-date"><%= game.date.strftime("%d %B %Y") %></div>
-          <div class="teamlogo-container">
-            <div class="teamlogo" style="background: url(<%= Team.find(game.home_team).logo %>);background-position: center; background-size: contain;">
-            </div>
-            <div class="teamlogo" style="background: url(<%= Team.find(game.away_team).logo %>);background-position: center; background-size: contain;">
-              
-            </div>
-          </div>
-          <div class="teamname-container">
-            <div class="teamname"><%= Team.find(game.home_team).title %></div>
-            <div class="teamname"><%= Team.find(game.away_team).title %></div>
-          </div>
-        </div>
-      <% end %>
-    </div>  
-    <%= link_to 'Compleet programma VCR 1', games_path, :class => 'orange-link' %>
-  </aside>
+
+
   <aside class="spotlight-sidebar">
     <h1 class="box-title">Uitgelicht</h1>
   </aside>
 </section>
+<script>
+  jQuery(document).ready(function() {
+    jQuery('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+ 
+        jQuery('.tabs ' + currentAttrValue).fadeIn(400).siblings().hide();
+ 
+        jQuery(this).parent('li').addClass('active-tab').siblings().removeClass('active-tab');
+ 
+        e.preventDefault();
+    });
+})
+</script>
