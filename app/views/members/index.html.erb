@@ -26,18 +26,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         <td><strong>Naam</strong></td>
         <td><strong>Functie</strong></td>
         <td><strong>Team</strong></td>
-        <td><strong>Tel.nr.</strong></td>
-        <td><strong>E-mail</strong></td>
         <td><strong>Geb. datum</strong></td>
         <td style="text-align:right;"> </td>
     </tr>
     <% @members.each do |member| %>
       <tr class="border_top">
-        <td><%= member.name %></td>
+        <td><%= link_to member.name, member_path(member) %></td>
         <td><%= member.occupation %></td>
         <td><%= VcrTeam.find(member.team).title %></td>
-        <td><%= member.phone %></td>
-        <td><%= member.email %></td>
         <td><%= member.birth_date %></td>
         <td>
         <button class="button-red right"><%= link_to member_path(member),

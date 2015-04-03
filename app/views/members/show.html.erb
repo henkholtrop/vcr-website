@@ -1,0 +1,53 @@
+<section class="content-wrapper">
+  <div class="cms-clear">.</div>
+  <aside class="cms-navigation">
+  <div class="nav-title">VCR CMS</div>
+    <nav class="cms-nav">
+      <li><%= link_to 'Nieuwsberichten', articles_path %></li>
+      <li><%= link_to 'VCR 1 Wedstrijden', games_path %></li>
+      <li><%= link_to 'VCR Teams', vcr_teams_path %></li>
+      <li><%= link_to 'Leden', members_path %></li>
+      <li><%= link_to 'Sponsoren', sponsors_path %></li>
+    </nav>
+  </aside>
+    <div class="article-wrapper"><h1 class="box-title">VCR lid: <%= @member.name %></h1>
+      <button class="button-blue"><%= link_to 'Bewerk lid', edit_member_path(@member) %></button>
+       <button class="button-red"><%= link_to member_path(@member),
+                           method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fa fa-trash"></i>  Verwijder lid
+        <% end %>
+      </button>
+      <div class="clear"></div>
+      <br>
+        <h3 class="cms-h3">Naam</h3>
+        <p>
+          <%= @member.name %>
+        </p><br>
+
+        <h3 class="cms-h3">Functie</h3>
+        <p>
+          <%= @member.occupation %>
+        </p><br>
+
+        <h3 class="cms-h3">Team</h3>
+        <p>
+          <%= VcrTeam.find(@member.team).title %>
+        </p><br>
+
+        <h3 class="cms-h3">Telefoon nummer</h3>
+        <p>
+          <%= @member.phone %>
+        </p><br>
+
+        <h3 class="cms-h3">Email adres</h3>
+        <p>
+          <%= @member.email %>
+        </p><br>
+
+        <h3 class="cms-h3">Geboorte datum</h3>
+        <p>
+          <%= @member.birth_date %>
+        </p><br>
+    </div>
+  <br class="clear" />
+</section>

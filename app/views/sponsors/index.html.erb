@@ -12,26 +12,39 @@
   </aside>
   <div class="article-wrapper">
     <h1 class="box-title">VCR Sponsoren</h1>
-    <button><%= link_to 'Sponsor toevoegen', new_sponsor_path %></button>
+    <button class="button-green"><%= link_to 'Sponsor toevoegen', new_sponsor_path %></button>
+    <table class="cms-table">
+    <tr style="height:65px;background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 79%, #efefef 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(79%,#ffffff), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 79%,#efefef 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
+">
+        <td><strong>Logo</strong></td>
+        <td><strong>Bedrijfsnaam</strong></td>
+        <td style="text-align:right;"> </td>
+    </tr>
     <% @sponsors.each do |sponsor| %>
-      <article class="homepage-article">
-        <div class="article-row">
-          <div class="article-image">
-            <div class="article-image-wrapper">
-              
-              <%= image_tag sponsor.logo %>
-            </div>
-          </div>
-          <div class="article-title">
-            <h2><%= sponsor.title %></h2>
-          </div>
-        </div>
-        <button><%= link_to 'Show', sponsor_path(sponsor) %></button>
-        <button><%= link_to 'Edit', edit_sponsor_path(sponsor) %></button>
-        <button><%= link_to 'Destroy', sponsor_path(sponsor),
-                             method: :delete, data: { confirm: 'Are you sure?' } %></button>
-      </article>
+      <tr class="border_top">
+        <td><%= image_tag sponsor.logo %></td>
+        <td><%= sponsor.title %></td>
+        <td>
+        <button class="button-red right"><%= link_to sponsor_path(sponsor),
+                           method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
+        </button>
+        <button class="button-blue right"><%= link_to edit_sponsor_path(sponsor) do %>
+          <i class="fa fa-edit"></i>
+        <% end %>
+        </button></td>
+      </tr>
     <% end %>
+  </table>
+
   </div>
   <br class="clear" />
 </section>

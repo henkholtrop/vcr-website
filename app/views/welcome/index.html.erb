@@ -41,6 +41,10 @@
     <h1 class="box-title">Programma VCR 1</h1>
     <div class="games-wrapper">
       <% @games.each do |game| %>
+
+        <% Team.find(game.home_team).title
+        Team.find(game.away_team).title %>
+
         <div class="game">
           <div class="game-date"><%= game.date.strftime("%-d %B %Y, %H:%M")%></div>
           <div class="teamlogo-container">
