@@ -20,8 +20,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     </tr>
     <% @content_pages.each do |content_page| %>
       <tr class="border_top">
-        <td><%= link_to content_page.name, member_path(content_page) %></td>
-        <td><%= content_page.occupation %></td>
+        <td><%= link_to content_page.title, content_page_path(content_page) %></td>
+        <td><%= content_page.club_type %></td>
         <td>
         <button class="button-red right"><%= link_to content_page_path(content_page),
                            method: :delete, data: { confirm: 'Are you sure?' } do %>
