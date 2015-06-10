@@ -1,5 +1,14 @@
 <section class="content-wrapper">
-  <div class="article-wrapper">.</div>
+  <aside class="cms-navigation">
+  <div class="nav-title">VCR CMS</div>
+    <nav class="cms-nav">
+      <li><%= link_to 'Nieuwsberichten', articles_path %></li>
+      <li><%= link_to 'VCR 1 Wedstrijden', games_path %></li>
+      <li><%= link_to 'VCR Teams', vcr_teams_path %></li>
+      <li><%= link_to 'Leden', members_path %></li>
+      <li><%= link_to 'Sponsoren', sponsors_path %></li>
+    </nav>
+  </aside>
     <div class="article-wrapper">
     <h1>Editing article</h1>
       <%= render 'form' %>
