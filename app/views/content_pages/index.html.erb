@@ -1,0 +1,39 @@
+<section class="content-wrapper">
+  <div class="cms-clear">.</div>
+  <%= render 'shared/cms_nav' %>
+  <div class="article-wrapper">
+  <h1 class="box-title">VCR Content Pagina's</h1>
+  <button class="button-green"><%= link_to 'Nieuwe pagina toevoegen', new_content_page_path %></button>
+    <table class="cms-table">
+    <tr style="height:65px;background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 79%, #efefef 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(79%,#ffffff), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 79%,#efefef 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
+">
+        <td><strong>Titel</strong></td>
+        <td><strong>Kopje</strong></td>
+        <td style="text-align:right;"> </td>
+    </tr>
+    <% @content_pages.each do |content_page| %>
+      <tr class="border_top">
+        <td><%= link_to content_page.name, member_path(content_page) %></td>
+        <td><%= content_page.occupation %></td>
+        <td>
+        <button class="button-red right"><%= link_to content_page_path(content_page),
+                           method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
+        </button>
+        <button class="button-blue right"><%= link_to edit_content_page_path(content_page) do %>
+          <i class="fa fa-edit"></i>
+        <% end %>
+        </button></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+</section>

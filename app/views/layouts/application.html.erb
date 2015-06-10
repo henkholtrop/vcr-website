@@ -10,9 +10,12 @@
 </head>
 <body>
 
-<% @senioren = VcrTeam.where("age_group = 'Senioren'").order('title ASC') %>
-<% @junioren = VcrTeam.where("age_group = 'Junioren'").order('title ASC') %>
-<% @pupillen = VcrTeam.where("age_group = 'Pupillen'").order('title ASC') %>
+<% @senioren =   VcrTeam.where("age_group = 'Senioren'").order('title ASC') %>
+<% @junioren =   VcrTeam.where("age_group = 'Junioren'").order('title ASC') %>
+<% @pupillen =   VcrTeam.where("age_group = 'Pupillen'").order('title ASC') %>
+<% @vcr =        ContentPage.where("club_type = 'VCR'").order('title ASC') %>
+<% @bestuur =    ContentPage.where("club_type = 'Bestuur'").order('title ASC') %>
+<% @commissies = ContentPage.where("club_type = 'Commissies'").order('title ASC') %>
 
 <header>
   <div class="content-wrapper">
@@ -23,9 +26,21 @@
         <div class="club-dropdown-wrapper">
             <div class="club-dropdown">
               <ul class="dropdown-list">
-                Senioren
-                <% @senioren.each do |vcr_team| %>
-                  <li><%= link_to vcr_team.title, vcr_team_path(vcr_team) %></li>
+                VCR
+                <% @vcr.each do |content_page| %>
+                  <li><%= link_to content_page.title, content_page_path(content_page) %></li>
+                <% end %>
+              </ul>
+              <ul class="dropdown-list">
+                Besturen
+                <% @bestuur.each do |content_page| %>
+                  <li><%= link_to content_page.title, content_page_path(content_page) %></li>
+                <% end %>
+              </ul>
+              <ul class="dropdown-list">
+                Commissies
+                <% @commissies.each do |content_page| %>
+                  <li><%= link_to content_page.title, content_page_path(content_page) %></li>
                 <% end %>
               </ul>
             </div>

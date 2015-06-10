@@ -1,0 +1,47 @@
+<div class="article-cover-image">
+  
+</div>
+<div class="cover-image-clear">
+  <div class="show-container">
+    <div class="article-show-title">
+      <h2><%= @content_page.title %></h2>
+    </div>
+  </div>  
+</div>
+
+<section class="content-wrapper">
+  <div class="article-wrapper">
+
+              <button class="button-blue"><%= link_to 'Bewerk pagina', edit_content_page_path(@content_page) %></button>
+              <button class="button-red"><%= link_to 'Verwijder pagina', content_page_path(@content_page),
+                                             method: :delete, data: { confirm: 'Are you sure?' } %></button> <div class="clear"></div>
+        <div class="article-text">
+          <%= simple_format @content_page.content %>
+        </div>
+    </div>
+  <aside class="program-sidebar">
+    <h1 class="box-title">Programma VCR1</h1>
+    <div class="games-wrapper">
+      <% @games.each do |game| %>
+        <div class="game">
+          <div class="game-date"><%= game.date.strftime("%d %B %Y") %></div>
+          <div class="teamlogo-container">
+            <div class="teamlogo" style="background: url(<%= Team.find(game.home_team).logo %>);background-position: center; background-size: contain;">
+            </div>
+            <div class="teamlogo" style="background: url(<%= Team.find(game.away_team).logo %>);background-position: center; background-size: contain;">
+              
+            </div>
+          </div>
+          <div class="teamname-container">
+            <div class="teamname"><%= Team.find(game.home_team).title %></div>
+            <div class="teamname"><%= Team.find(game.away_team).title %></div>
+          </div>
+        </div>
+      <% end %>
+    </div>  
+    <%= link_to 'Compleet programma VCR 1', games_path, :class => 'orange-link' %>
+  </aside>
+  <aside class="spotlight-sidebar">
+    <h1 class="box-title">Uitgelicht</h1>
+  </aside>
+</section>
