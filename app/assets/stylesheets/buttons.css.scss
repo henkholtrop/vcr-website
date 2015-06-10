@@ -1,0 +1,101 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100italic,100,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+@import 'grid';
+@import 'typography';
+
+.button-green, .button-red, .button-blue {
+  border-radius: 3px;
+  border: 0;
+  font-size: 14px;
+  font-family: $font-stack;
+  font-weight: 400;
+  margin: 10px 5px 10px 0;
+  display: flex;
+  float: left;
+  a {
+    color: #FFF;
+    text-decoration: none;
+    padding: 9px 15px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.button-blue {
+  background: #3498db;
+  transition: background 0.25s, ease;
+  &:hover {
+    background: #2980b9;
+    transition: background 0.25s, ease;
+ }
+}
+
+.button-red {
+  background: #e74c3c;
+  transition: background 0.25s, ease;
+  &:hover {
+    background: #c0392b;
+    transition: background 0.25s, ease;
+ }
+}
+
+.button-green {
+  background: #2ecc71;
+  transition: background 0.25s, ease;
+  &:hover {
+    background: #27ae60;
+    transition: background 0.25s, ease;
+ }
+}
+
+input[type="date"] {
+  width: 125px;
+  height: 30px;
+}
+
+input {
+  width: 350px;
+  height: 30px;
+}
+
+input[type="submit"] {
+  border: none;
+  font-size: 14px;
+  font-family: $font-stack;
+  cursor: pointer;
+  height: 42px;
+  width: 150px;
+  color: #FFF;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 9px 15px;
+  background: #2ecc71;
+  transition: background 0.25s, ease;
+  &:hover {
+    background: #27ae60;
+    transition: background 0.25s, ease;
+  }
+  &:active {
+    margin-top: 1px;
+    background: #27ae60;
+  }
+}
+
+.right {
+  float: right;
+}
+
+.cms-table {
+  font-family: $font-stack;
+  width: 100%;
+  tr {
+    td {
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

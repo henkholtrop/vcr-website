@@ -1,0 +1,114 @@
+// Place all the styles related to the vcr_teams controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100italic,100,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+@import 'grid';
+@import 'typography';
+
+.team-image {
+  width: 100%;
+  padding: 21px 0 40px;
+  border-bottom: 1px solid #DEDEDE;
+}
+
+.member-wrapper {
+  height: 135px;
+  width: 49%;
+  float: left;
+  display: block;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  border: 1px solid #CACACA;
+  box-sizing: border-box;
+  &:nth-child(even) {
+    margin-right: 0%;
+  }
+}
+
+.member-photo {
+  float: left;
+  height: 100%;
+  width: 35%;
+  background-color: #CACACA;
+}
+
+.member-info {
+  width: 65%;
+  height: 100%;
+  padding: 20px;
+  float: left;
+  box-sizing: border-box;
+}
+
+.member-name {
+  font-family: $font-stack;
+  font-weight: 500;
+  font-size: 16px;
+  color: #2A2A2A;
+  margin-bottom: 10px;
+  .member-sub {
+  font-size: 14px;
+  color: #9B9B9B;
+  }
+}
+
+.member-details {
+  font-family: $font-stack;
+  font-size: 14px;
+  color: #9B9B9B;
+}
+
+.tabs {
+  background: #2A2A2A;
+  width: $col-2;
+  float: left;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: $side-margin $side-margin -1.51% $side-margin;
+  .tab-links {
+    margin: 0;
+    padding: 0;
+    .active-tab a {
+      color: #3F3F3F!important;
+      background: #FFFFFF;
+      &:hover {
+        color: #3F3F3F!important;
+        background: #FFFFFF!important;
+      }
+    }
+    li {
+      float:left;
+      list-style:none;
+      .nav-tab {
+        padding: 21px 36px;
+        display: inline-block;
+        font-family: $font-stack;
+        font-size: 16px;
+        color: #FFFFFF;
+        line-height: 21px;
+        text-decoration: none;
+        transition:all linear 0.15s;
+        &:hover {
+          background: #3F3F3F;
+        }
+      }
+    }
+  }
+}
+
+.tab {
+  display: none;
+}
+
+.active-tab {
+  display: block;
+}
+
+.tab-content {
+  width: 100%;
+  background: #FFFFFF;
+  display: inline-block;
+  margin-bottom: -1%;
+  padding: 4%;
+  box-sizing: border-box;
+}

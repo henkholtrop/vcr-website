@@ -19,5 +19,4 @@
 
 config/database.yml
 /public/system
-/app/assets
 # Ignore application configuration
