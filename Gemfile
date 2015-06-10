@@ -4,6 +4,7 @@ gem 'quiet_assets'
 gem "paperclip", "~> 4.2"
 gem 'font-awesome-rails', '~> 4.2.0.0'
 gem "simple-navigation"
+gem 'will_paginate', '~> 3.0.5'
 
 gem 'rails', '4.1.8'
 gem 'sqlite3'

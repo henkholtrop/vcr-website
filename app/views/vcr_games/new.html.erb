@@ -1,0 +1,17 @@
+<section class="content-wrapper">
+  <div class="cms-clear">.</div>
+  <aside class="cms-navigation">
+  <div class="nav-title">VCR CMS</div>
+    <nav class="cms-nav">
+      <li><%= link_to 'Nieuwsberichten', articles_path %></li>
+      <li><%= link_to 'VCR 1 Wedstrijden', games_path %></li>
+      <li><%= link_to 'VCR Teams', vcr_teams_path %></li>
+      <li><%= link_to 'Leden', members_path %></li>
+      <li><%= link_to 'Sponsoren', sponsors_path %></li>
+    </nav>
+  </aside>
+    <div class="article-wrapper"><h1 class="box-title">Nieuwe wedstrijd toevoegen</h1>
+      <%= render 'form' %>
+    </div>
+  <br class="clear" />
+</section>

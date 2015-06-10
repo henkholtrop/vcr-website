@@ -18,6 +18,7 @@ class VcrTeamsController < ApplicationController
   def show
     @vcr_team = VcrTeam.find(params[:id])
     @players = Member.where('team == ?', @vcr_team.id).where('occupation == ?', 'Speler')
+    @vcr_games = VcrGame.where('vcr_team == ?', @vcr_team.id).order('date ASC')
     @sponsors = Sponsor.all
     @games = Game.where('date >= ?', Date.today).order('date ASC').limit(3)
   end

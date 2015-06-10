@@ -1,0 +1,37 @@
+<%= form_for @vcr_game do |f| %>
+  <% if @vcr_game.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@vcr_game.errors.count, "error") %> prohibited
+      this team from being saved:</h2>
+    <ul>
+    <% @vcr_game.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <p>
+    <%= f.label :vcr_team %><br>
+    <%= f.collection_select(:vcr_team, VcrTeam.all, :id, :title) %>
+  </p>
+
+  <p>
+    <%= f.label :date %><br>
+    <%= f.datetime_select :date %>
+  </p>
+
+  <p>
+    <%= f.label :home_team %><br>
+    <%= f.text_field :home_team %>
+  </p>
+
+  <p>
+    <%= f.label :away_team %><br>
+    <%= f.text_field :away_team %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

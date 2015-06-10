@@ -1,7 +1,24 @@
 <div class="box-title">Wedstrijdschema <%= @vcr_team.title %></div>
-  <button class="button-green"><%= link_to 'Nieuwe wedstrijd toevoegen', new_member_path %></button>
+  <button class="button-green"><%= link_to 'Nieuwe wedstrijd toevoegen', new_vcr_game_path %></button>
   <div class="clear"></div>
 
 <div class="article-text">
-    Wedstrijden
+  <table class="cms-table">
+    <% @vcr_games.each do |vcr_game| %>
+      <tr class="border_top">
+        <td><%= vcr_game.date.strftime("%-d %B %Y, %H:%M")%></td>
+        <td><%= vcr_game.home_team %></td>
+        <td><%= vcr_game.away_team %></td>
+        <td><button class="button-red right"><%= link_to vcr_game_path(vcr_game),
+                           method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
+        </button>
+        <button class="button-blue right"><%= link_to edit_vcr_game_path(vcr_game) do %>
+          <i class="fa fa-edit"></i>
+        <% end %>
+        </button></td>
+      </tr>
+    <% end %>
+  </table>
 </div>

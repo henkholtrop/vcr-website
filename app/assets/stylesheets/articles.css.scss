@@ -187,3 +187,40 @@ input {
   box-sizing: border-box;
   background-color: #FFF;
 }
+
+.pagination-outer {
+  width: 80%;
+  margin: auto;
+  font-family: $font-stack;
+  margin-top: 20px;
+}
+
+.pagination {
+  display: inline-flex;
+  color: #9B9B9B;
+  a {
+    padding: 10px 15px;
+    color: #9B9B9B;
+    text-decoration: none;
+    transition: 0.25s, ease;
+    &:hover {
+      color: #2A2A2A;
+      transition: 0.25s, ease;
+    }
+  }
+  .current {
+    color: #DD5F2A;
+    background: #FFFFFF;
+    font-style: normal;
+    font-weight: 700;
+    padding: 10px 15px;
+  }
+  .gap {
+    padding: 10px 0;
+  }
+}
+
+.disabled {
+  font-style: italic;
+  padding: 10px 15px;
+}

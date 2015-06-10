@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.all.order('created_at DESC')
+    @articles = Article.order('created_at DESC').paginate(:page => params[:page], :per_page => 12)
     @games = Game.where('date >= ?', Date.today).order('date ASC').limit(3)
   end
  

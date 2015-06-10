@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150502092506) do
+ActiveRecord::Schema.define(version: 20150610100012) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -48,6 +48,10 @@ ActiveRecord::Schema.define(version: 20150502092506) do
     t.integer  "team"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "members", ["vcr_team_id"], name: "index_members_on_vcr_team_id"
@@ -88,6 +92,15 @@ ActiveRecord::Schema.define(version: 20150502092506) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+  end
+
+  create_table "vcr_games", force: true do |t|
+    t.datetime "date"
+    t.string   "home_team"
+    t.string   "away_team"
+    t.integer  "vcr_team"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "vcr_teams", force: true do |t|

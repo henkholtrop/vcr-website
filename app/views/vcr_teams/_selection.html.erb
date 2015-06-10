@@ -10,7 +10,7 @@
     <div class="clear"></div>
     <% @players.each do |member| %>
       <div class="member-wrapper">
-        <div class="member-photo"></div>
+        <div class="member-photo" style="background-image: url(<%= member.avatar %>); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
         <div class="member-info">
           <div class="member-name">
             <%= member.name %>
