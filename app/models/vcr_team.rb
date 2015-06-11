@@ -2,7 +2,7 @@ class VcrTeam < ActiveRecord::Base
   validates :title, presence: true,
                   length: { minimum: 5 }
 
-  has_many :vcr_games
+  has_one :vcr_game
 
   has_attached_file :cover_image, :default_url => "/images/normal/missing_cover.png"
   validates_attachment_content_type :cover_image, content_type: /\Aimage\/.*\Z/
