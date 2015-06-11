@@ -14,7 +14,7 @@
 <% @junioren =   VcrTeam.where("age_group = 'Junioren'").order('title ASC') %>
 <% @pupillen =   VcrTeam.where("age_group = 'Pupillen'").order('title ASC') %>
 <% @vcr =        ContentPage.where("club_type = 'VCR'").order('title ASC') %>
-<% @bestuur =    ContentPage.where("club_type = 'Bestuur'").order('title ASC') %>
+<% @bestuur =    ContentPage.where("club_type = 'Besturen'").order('title ASC') %>
 <% @commissies = ContentPage.where("club_type = 'Commissies'").order('title ASC') %>
 
 <header>
@@ -46,7 +46,7 @@
             </div>
           </div>
       </li>
-      <li id="teams" class="<%= 'active-menu' if current_page?(vcr_teams_path) %>"><a href="<% vcr_teams_path %>">Teams<i class="fa fa-angle-down fa-fw"></i></a>
+      <li id="teams" class="<%= 'active-menu' if current_page?(vcr_teams_path) %>"><a href="#">Teams<i class="fa fa-angle-down fa-fw"></i></a>
         <div class="teams-dropdown-wrapper">
             <div class="teams-dropdown">
               <ul class="dropdown-list">

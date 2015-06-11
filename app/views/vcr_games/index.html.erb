@@ -1,0 +1,29 @@
+<section class="content-wrapper">
+  <div class="cms-clear">.</div>
+  <%= render 'shared/cms_nav' %>
+  <div class="article-wrapper">
+    <h1 class="box-title">Wedstrijden VCR</h1>
+    <button class="button-green"><%= link_to 'Nieuwe wedstrijd', new_vcr_game_path %></button>
+
+  <table class="cms-table">
+    <% @vcr_games.each do |vcr_game| %>
+      <tr class="border_top">
+        <td><%= vcr_game.date.strftime("%-d %B %Y, %H:%M")%></td>
+        <td><%= vcr_game.home_team %></td>
+        <td><%= vcr_game.away_team %></td>
+        <td><%= VcrTeam.find(vcr_game.vcr_team).title %></td>
+        <td><button class="button-red right"><%= link_to vcr_game_path(vcr_game),
+                           method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
+        </button>
+        <button class="button-blue right"><%= link_to edit_vcr_game_path(vcr_game) do %>
+          <i class="fa fa-edit"></i>
+        <% end %>
+        </button></td>
+      </tr>
+    <% end %>
+  </table>
+
+  </div>
+</section>

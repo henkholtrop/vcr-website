@@ -63,3 +63,8 @@ table {
     transition: background 0.25s, ease-in-out;
   }
 }
+
+textarea {
+  width: 100%;
+  min-height: 250px;
+}

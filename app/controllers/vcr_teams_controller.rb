@@ -46,9 +46,17 @@ class VcrTeamsController < ApplicationController
 
   def destroy
     @vcr_team = VcrTeam.find(params[:id])
-    @vcr_team.destroy
-   
-    redirect_to vcr_teams_path
+
+    @vcr_game = VcrGame.where(["vcr_team = ?", @vcr_team])
+
+    if !@vcr_game.present?
+      @vcr_team.destroy
+      redirect_to vcr_teams_path
+    else @vcr_game.present?
+      VcrGame.delete_all(["vcr_team = ?", @vcr_team])
+      @vcr_team.destroy
+      redirect_to vcr_teams_path
+    end
   end
 
 private
