@@ -138,7 +138,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootsy
   coffee-rails (~> 4.0.0)
   font-awesome-rails (~> 4.2.0.0)
   jbuilder (~> 2.0)
