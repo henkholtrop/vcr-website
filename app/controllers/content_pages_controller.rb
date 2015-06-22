@@ -38,9 +38,10 @@ class ContentPagesController < ApplicationController
   end
 
   def destroy
-    @content_page.find(params[:id])
+    @content_page= ContentPage.find(params[:id])
+    @content_page.destroy
 
-    redirect_to content_page_path
+    redirect_to content_pages_path
   end
 
   private

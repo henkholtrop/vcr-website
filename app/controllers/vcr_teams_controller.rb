@@ -61,6 +61,6 @@ class VcrTeamsController < ApplicationController
 
 private
   def vcr_team_params
-    params.require(:vcr_team).permit(:title, :age_group, :cover_image, :team_image)
+    params.require(:vcr_team).permit(:title, :age_group, :cover_image, :team_image, :info)
   end
 end

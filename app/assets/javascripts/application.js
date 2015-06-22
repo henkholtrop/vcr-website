@@ -17,3 +17,5 @@
 //= require jquery.superslides
 //= require jquery.superslides.min
 //= require owl.carousel.min
+//= require froala_editor.min.js
+//= require plugins/font_family.min.js
