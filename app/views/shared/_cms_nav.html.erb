@@ -1,3 +1,4 @@
+<% if current_user.present? %>
 <aside class="cms-navigation">
   <div class="nav-title">VCR CMS</div>
     <nav class="cms-nav">
@@ -5,8 +6,11 @@
       <li><%= link_to 'Content Paginas', content_pages_path %></li>
       <li><%= link_to 'VCR 1 Wedstrijden', games_path %></li>
       <li><%= link_to 'VCR Teams', vcr_teams_path %></li>
-      <li><%= link_to 'Leden', members_path %></li>
-      <li><%= link_to 'Sponsoren', sponsors_path %></li>
       <li><%= link_to 'Wedstrijden', vcr_games_path %></li>
+      <li><%= link_to 'VCR Leden', members_path %></li>
+      <li><%= link_to 'Sponsoren', sponsors_path %></li>
+      <li><%= link_to 'Gebruikers', users_path %></li>
+      <li><%= link_to 'Uitloggen', log_out_path %></li>
     </nav>
   </aside>
+<% end %>

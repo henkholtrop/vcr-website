@@ -1,0 +1,41 @@
+<section class="content-wrapper">
+  <div class="cms-clear">.</div>
+  <%= render 'shared/cms_nav' %>
+  <div class="article-wrapper">
+  <h1 class="box-title">Gebruikers</h1>
+  <button class="button-green"><%= link_to 'Nieuw lid toevoegen', new_user_path %></button>
+    <table class="cms-table">
+    <tr style="height:65px;background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 79%, #efefef 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(79%,#ffffff), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 79%,#efefef 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 79%,#efefef 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
+">
+        <td><strong>Naam</strong></td>
+        <td><strong>Email</strong></td>
+        <td><strong>Rol</strong></td>
+        <td style="text-align:right;"> </td>
+    </tr>
+    <% @users.each do |user| %>
+      <tr class="border_top">
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td>rol</td>
+        <td>
+        <button class="button-red right"><%= link_to user_path(user),
+                           method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
+        </button>
+        <button class="button-blue right"><%= link_to edit_user_path(user) do %>
+          <i class="fa fa-edit"></i>
+        <% end %>
+        </button></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+</section>

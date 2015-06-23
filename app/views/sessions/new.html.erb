@@ -1,0 +1,18 @@
+
+<section class="content-wrapper">
+  <div class="cms-clear">.</div>
+    <div class="article-wrapper"><h1 class="box-title">Inloggen</h1>
+      <%= form_for(:session, url: sessions_path) do |f| %>
+      <p>
+        <%= f.email_field :email, :placeholder => 'E-mail' %>
+      </p>
+      <p>
+        <%= f.password_field :password, :placeholder => 'Wachtwoord'%>
+      </p>
+      <p>
+        <%= f.submit %>
+      </p>
+      <% end %>
+    </div>
+  <br class="clear" />
+</section>
