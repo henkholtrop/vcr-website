@@ -31,6 +31,10 @@
   </p>
 
   <p>
+    <%= f.collection_select(:role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize}) %>
+  </p>
+
+  <p>
     <%= f.submit %>
   </p>
 <% end %>

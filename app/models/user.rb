@@ -1,6 +1,7 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
+  ROLES = %i[admin moderator author banned]
   has_secure_password validations: false
 
 # users.password_hash in the database is a :string

@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   resources :members        #Members of Voetbalclub Rinsumageest
   resources :content_pages  #Page's shown at "De Club"
   resources :users          #Administrators
-  resources :groups         #Administrator roles
 
   resources :sessions, only: [:new, :create, :destroy]
 
