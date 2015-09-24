@@ -22,11 +22,6 @@ class User < ActiveRecord::Base
 # users.password_hash in the database is a :string
   include BCrypt
 
-
-  def downcase_email
-    self.email = self.email.downcase if self.email.present?
-  end
-
   before_validation :downcase_email
 
   validates :name,
