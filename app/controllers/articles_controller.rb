@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
+  load_and_authorize_resource
 
   def new
-    @article = Article.new
   end
 
   def index
@@ -10,7 +10,6 @@ class ArticlesController < ApplicationController
   end
  
   def create
-    @article = Article.new(article_params)
    
     if @article.save
       redirect_to @article
@@ -20,17 +19,14 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Article.find(params[:id])
   end
 
   def show
-    @article = Article.find(params[:id])
     @sponsors = Sponsor.all
     @games = Game.where('date >= ?', Date.today).order('date ASC').limit(3)
   end
 
   def update
-    @article = Article.find(params[:id])
    
     if @article.update(article_params)
       redirect_to @article
@@ -40,7 +36,6 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.find(params[:id])
     @article.destroy
    
     redirect_to articles_path

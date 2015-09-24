@@ -1,5 +1,7 @@
 class VcrTeamsController < ApplicationController
 
+  load_and_authorize_resource
+
   def index
     @vcr_teams = VcrTeam.all.order('title ASC')
     @senioren = VcrTeam.where("age_group = 'Senioren'").order('title ASC')

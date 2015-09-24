@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  skip_before_filter :ensure_user, :only => [:create, :new]
+  
+  load_and_authorize_resource
+  
   def index
     @users = User.all.order('name DESC')
   end

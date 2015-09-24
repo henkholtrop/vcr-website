@@ -12,10 +12,11 @@
 
 <section class="content-wrapper">
 	<div class="article-wrapper">
-
-              <button class="button-blue"><%= link_to 'Bewerk bericht', edit_article_path(@article) %></button>
-              <button class="button-red"><%= link_to 'Verwijder bericht', article_path(@article),
-                                             method: :delete, data: { confirm: 'Are you sure?' } %></button> <div class="clear"></div>
+    <% if current_user.present? %>
+      <button class="button-blue"><%= link_to 'Bewerk bericht', edit_article_path(@article) %></button>
+      <button class="button-red"><%= link_to 'Verwijder bericht', article_path(@article),
+                                     method: :delete, data: { confirm: 'Are you sure?' } %></button> <div class="clear"></div>
+    <% end %>
         <div class="article-text">
         	<%= simple_format @article.text %>
         </div>

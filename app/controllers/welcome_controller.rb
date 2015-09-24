@@ -1,13 +1,15 @@
 class WelcomeController < ApplicationController
 
-  def new
-    @article = Article.new
-  end
+  skip_authorization_check
 
   def index
     @articles = Article.all.order('created_at DESC').limit(6)
     @sponsors = Sponsor.all
     @games = Game.where('date >= ?', Date.today).order('date ASC').limit(3)
+  end
+
+  def new
+    @article = Article.new
   end
  
   def create

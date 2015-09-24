@@ -1,8 +1,10 @@
 <div class="box-title">Selectie <%= @vcr_team.title %></div>
-      <button class="button-green"><%= link_to 'Selectie lid toevoegen', new_member_path %></button>
-      <button class="button-blue"><%= link_to 'Bewerk team', edit_vcr_team_path(@vcr_team) %></button>
-      <button class="button-red"><%= link_to 'Verwijder team', vcr_team_path(@vcr_team),
-                                     method: :delete, data: { confirm: 'Are you sure?' } %></button> <div class="clear"></div>
+  <% if current_user.present? %>
+    <button class="button-green"><%= link_to 'Selectie lid toevoegen', new_member_path %></button>
+    <button class="button-blue"><%= link_to 'Bewerk team', edit_vcr_team_path(@vcr_team) %></button>
+    <button class="button-red"><%= link_to 'Verwijder team', vcr_team_path(@vcr_team),
+                                   method: :delete, data: { confirm: 'Are you sure?' } %></button> <div class="clear"></div>
+  <% end %>
   <%= image_tag @vcr_team.team_image, :class => 'team-image' %>
 <div class="article-text">
   <h3 class="subtitle">Spelers</h3>

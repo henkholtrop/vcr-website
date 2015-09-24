@@ -4,6 +4,21 @@ class User < ActiveRecord::Base
   ROLES = %i[admin moderator author banned]
   has_secure_password validations: false
 
+  def roles=(roles)
+    roles = [*roles].map { |r| r.to_sym }
+    self.roles_mask = (roles & ROLES).map { |r| 2**ROLES.index(r) }.inject(0, :+)
+  end
+
+  def roles
+    ROLES.reject do |r|
+      ((roles_mask.to_i || 0) & 2**ROLES.index(r)).zero?
+    end
+  end
+
+  def has_role?(role)
+    roles.include?(role)
+  end
+
 # users.password_hash in the database is a :string
   include BCrypt
 
@@ -41,7 +56,12 @@ class User < ActiveRecord::Base
               message: '* De wachtwoorden komen niet overeen.'
             },
             if: :password
+
   def downcase_email
     self.email = email.downcase if email.present?
+  end
+
+  def has_role?(role)
+    roles.include?(role)
   end
 end

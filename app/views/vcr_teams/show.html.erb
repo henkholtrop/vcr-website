@@ -5,7 +5,9 @@
   <div class="show-container">
     <div class="article-show-title">
       <h2><%= @vcr_team.title %></h2>
-      <button class="button-blue"><%= link_to 'Team bewerken', edit_vcr_team_path(@vcr_team) %></button>
+        <% if current_user.present? %>
+          <button class="button-blue"><%= link_to 'Team bewerken', edit_vcr_team_path(@vcr_team) %></button>
+        <% end %>
     </div>
   </div>  
 </div>

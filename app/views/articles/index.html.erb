@@ -5,7 +5,9 @@
 
   <div class="article-wrapper">
     <h1 class="box-title">Nieuws</h1>
-    <button class="button-green"><%= link_to 'Nieuw bericht plaatsen', new_article_path %></button>
+    <% if current_user.present? %>
+      <button class="button-green"><%= link_to 'Nieuw bericht plaatsen', new_article_path %></button>
+    <% end %>
     <% @articles.each do |article| %>
     <div class="clear"></div>
       <article class="homepage-article">
@@ -16,9 +18,11 @@
           <div class="article-title">
             <p class="article-date"><%= article.created_at.strftime("%d %B %Y") %></p>
             <h2><%= link_to article.title, article_path(article) %></h2>
-            <button class="button-blue"><%= link_to 'Bewerk bericht', edit_article_path(article) %></button>
+            <% if current_user.present? %>
+              <button class="button-blue"><%= link_to 'Bewerk bericht', edit_article_path(article) %></button>
               <button class="button-red"><%= link_to 'Verwijder bericht', article_path(article),
-                                             method: :delete, data: { confirm: 'Are you sure?' } %></button>
+                                               method: :delete, data: { confirm: 'Are you sure?' } %></button>
+            <% end %>
           </div>
         </div>
         <div class="clear"> </div>        
