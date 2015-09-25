@@ -1,7 +1,7 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
-  ROLES = %i[admin moderator author banned]
+  ROLES = %i[admin author teammanager]
   has_secure_password validations: false
 
   def roles=(roles)
