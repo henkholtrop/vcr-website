@@ -54,7 +54,7 @@ class VcrTeamsController < ApplicationController
     if !@vcr_game.present?
       @vcr_team.destroy
       redirect_to vcr_teams_path
-    else @vcr_game.present?
+    elsif @vcr_game.present?
       VcrGame.delete_all(["vcr_team = ?", @vcr_team])
       @vcr_team.destroy
       redirect_to vcr_teams_path
